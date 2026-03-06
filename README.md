@@ -76,6 +76,74 @@ citadel.writer.draft.submitted      — Writing draft ready for review
 
 ---
 
+## Mission System
+
+Creator missions reward artistic output, lore production, and cross-guild creative collaboration.
+
+| Mission | Description | XP | Unlock |
+|---------|-------------|-----|--------|
+| First Lore | Compile your first RPG session into a lore entry | 150 | Default |
+| Book Queue | Export a lore batch to the book pipeline | 300 | Creator rank |
+| Asset Upload | Register 5 creative assets in the guild registry | 100 | Default |
+| Collab Session | Complete a cross-guild creative session | 250 | Creator rank |
+| Voice Narration | Produce an ElevenLabs narration for a lore piece | 200 | Creator rank |
+| World Arc | Complete a full narrative arc (3+ sessions) | 600 | Loremaster rank |
+| Studio Track | Produce a beat via the Music Studio pipeline | 150 | Default |
+
+**Daily missions (reset 00:00 UTC):**
+- Submit a `citadel.creator.lore.compiled` event — 25 XP
+- Upload a creative asset to the registry — 25 XP
+
+The Creator guild feeds directly into the Entertainment guild's XP economy —
+lore contributions and artistic assets amplify XP multipliers for active campaigns.
+
+---
+
+## Guild Expectations
+
+**Members:**
+- At least 1 creative output per sprint (lore entry, asset, or track)
+- Participate in at least 1 collaborative session per month
+- Complete Creator onboarding (lore pipeline primer) within 7 days of placement
+- Engage in `#showcase` and `#writers-room` lobby channels
+
+**Contributors:**
+- All lore submissions must pass the Writers guild editorial review before merge
+- ElevenLabs voice scripts require a content review (tone + canon compliance)
+- New Supabase tables (e.g., `rpg_sessions`, `lore_entries`) need RLS policies
+- Code review turnaround: 48 hours
+
+**Guild Lead (Creative Director):**
+- Weekly creative output summary to `#announcements`
+- Coordinate with Writers guild lead on canon consistency
+- Manage the lore → book pipeline export schedule
+
+---
+
+## Contributing
+
+**Branch naming:**
+```
+feat/<srs-code>/<short-description>
+fix/<srs-code>/<short-description>
+lore/<srs-code>/<short-description>
+```
+
+**PR checklist:**
+- [ ] SRS code referenced (e.g., `SRS: CRE-LORE-002`)
+- [ ] `npm test` passes
+- [ ] Lore entries reference session IDs in `rpg_sessions`
+- [ ] ElevenLabs scripts reviewed for canonical accuracy
+- [ ] No PII in lore content (player names anonymized)
+
+**Commit format:** `<type>(<srs-code>): <description>`
+Example: `feat(CRE-LORE-002): compile The Siege of Vault 7 into lore canon`
+
+**SAKE compliance:** New pipeline modules require a `.sake` file stub.
+See [guild-sdk](https://github.com/citadel-nexus/guild-sdk) for the format.
+
+---
+
 ## Getting Started
 
 ```bash
