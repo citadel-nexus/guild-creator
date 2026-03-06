@@ -1,5 +1,5 @@
 {
-  "name": "@citadel-guilds/guild-creator",
+  "name": "@citadel-guilds/creator",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
