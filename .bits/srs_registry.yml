@@ -10,3 +10,15 @@ SRS-CN-CREATOR-LIVINGWORLD-001:
   notes: >
     Public contract for the creator floor of the Aincrad living world — the
     citadel.creator.* events + /realm/creator.json feed the game reads. Public-safe only.
+
+SRS-CN-CREATOR-AUTOMATION-001:
+  ep: GUILD-AUTOMATION-001
+  status: in_progress
+  phase: "Creator guild — CI visibility, PostHog, and build/review automation"
+  paths:
+    - .env.example
+    - .github/workflows/ci.yml
+    - .github/CODEOWNERS
+  notes: >
+    Enable Datadog CI Visibility, document PostHog environment variables,
+    and add CODEOWNERS for PR review automation.
