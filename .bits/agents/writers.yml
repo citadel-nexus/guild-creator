@@ -10,7 +10,7 @@
 # Created:     2026-09-25
 # Depends:     .bits/agents/muse.yml, CLAUDE.md
 # EnumType:    ConfigDoc
-# EnumEdges:   DEPENDS_ON .bits/agents/muse.yml; PRODUCES citadel.creator.coordination.writers; CONSUMES citadel.creator.delegation.writers
+# EnumEdges:   DEPENDS_ON .bits/agents/muse.yml; PRODUCES citadel.creator.coordination.writers; PRODUCES citadel.creator.subguild.writers.status; CONSUMES citadel.creator.delegation.writers; CONSUMES citadel.guild.comms.creator→writers
 # DAG Node:    creator.agent.writers
 # Intent:      Limit Writers coordination to bounded reports and Muse-issued delegations without sibling authority.
 # ─────────────────────────────────────────────────────────────
@@ -27,8 +27,10 @@ seat:
   nats_subjects:
     publish:
       - citadel.creator.coordination.writers
+      - citadel.creator.subguild.writers.status
     subscribe:
       - citadel.creator.delegation.writers
+      - citadel.guild.comms.creator→writers
   escalation_target: Muse
   health_check_endpoint: /health
   fail_closed: true

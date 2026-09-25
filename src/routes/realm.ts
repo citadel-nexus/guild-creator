@@ -8,9 +8,9 @@
 // Seat:        BITS-CODEGEN
 // Owner:       Citadel Nexus Inc.
 // Created:     2026-09-25
-// Depends:     src/automation/livingworld-floor.ts, src/routes/health.ts
+// Depends:     src/automation/livingworld-floor.ts, src/routes/health.ts, src/integrations/n8n-webhook.ts
 // EnumType:    Route
-// EnumEdges:   PRODUCES /realm/creator.json; PRODUCES /game/party.json; PRODUCES /health
+// EnumEdges:   PRODUCES /realm/creator.json; PRODUCES /game/party.json; PRODUCES /health; CONSUMES /webhooks/n8n
 // DAG Node:    creator.realm.route
 // Intent:      Expose the public Creator realm and Muse party bindings as read-only JSON contracts.
 // ─────────────────────────────────────────────────────────────
@@ -18,6 +18,8 @@
 import type { IncomingMessage, RequestListener, ServerResponse } from 'node:http';
 
 import type { LivingWorldFloor } from '../automation/livingworld-floor.js';
+import type { N8nWebhookHandler } from '../integrations/n8n-webhook.js';
+import type { RealmEngagementTracker } from '../integrations/runtime.js';
 import { healthCheck } from './health.js';
 
 export interface CreatorRouteResult {
@@ -25,6 +27,13 @@ export interface CreatorRouteResult {
   readonly cacheable: boolean;
   readonly statusCode: number;
 }
+
+export interface CreatorRouteOptions {
+  readonly engagement?: RealmEngagementTracker;
+  readonly webhook?: N8nWebhookHandler;
+}
+
+const MAX_WEBHOOK_BYTES = 64 * 1024;
 
 function writeJson(response: ServerResponse, statusCode: number, body: unknown, cacheable = false): void {
   response.writeHead(statusCode, {
@@ -36,6 +45,39 @@ function writeJson(response: ServerResponse, statusCode: number, body: unknown, 
 
 function requestPath(request: IncomingMessage): string {
   return new URL(request.url ?? '/', 'http://localhost').pathname;
+}
+
+async function requestBody(request: IncomingMessage): Promise<Buffer> {
+  const chunks: Buffer[] = [];
+  let length = 0;
+  for await (const chunk of request) {
+    const value = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk as Uint8Array);
+    length += value.length;
+    if (length > MAX_WEBHOOK_BYTES) {
+      throw new RangeError('Webhook body exceeds the public limit');
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks);
+}
+
+async function handleN8nWebhook(
+  request: IncomingMessage,
+  response: ServerResponse,
+  webhook: N8nWebhookHandler | undefined,
+): Promise<void> {
+  if (webhook === undefined) {
+    writeJson(response, 503, { error: 'integration_unavailable' });
+    return;
+  }
+  try {
+    const signatureValue = request.headers['x-n8n-signature'];
+    const signature = Array.isArray(signatureValue) ? signatureValue[0] : signatureValue;
+    const result = await webhook.handle(await requestBody(request), signature);
+    writeJson(response, result.statusCode, result.body);
+  } catch {
+    writeJson(response, 400, { error: 'invalid_request' });
+  }
 }
 
 export function routeCreatorRequest(method: string | undefined, path: string, floor: LivingWorldFloor): CreatorRouteResult {
@@ -55,9 +97,17 @@ export function routeCreatorRequest(method: string | undefined, path: string, fl
   }
 }
 
-export function createRealmRequestListener(floor: LivingWorldFloor): RequestListener {
+export function createRealmRequestListener(floor: LivingWorldFloor, options: CreatorRouteOptions = {}): RequestListener {
   return (request, response): void => {
-    const result = routeCreatorRequest(request.method, requestPath(request), floor);
+    const path = requestPath(request);
+    if (request.method === 'POST' && path === '/webhooks/n8n') {
+      void handleN8nWebhook(request, response, options.webhook);
+      return;
+    }
+    const result = routeCreatorRequest(request.method, path, floor);
+    if (request.method === 'GET' && path === '/realm/creator.json') {
+      options.engagement?.trackRealmFeedView();
+    }
     writeJson(response, result.statusCode, result.body, result.cacheable);
   };
 }

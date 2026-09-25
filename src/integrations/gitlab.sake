@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/gitlab.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/gitlab.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/gitlab.ts
+# DAG Node:    creator.integrations.gitlab.sake
+# Intent:      Declare lifecycle ownership for the read-only self-hosted GitLab bridge.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/gitlab.ts
+owner: Muse
+status: active

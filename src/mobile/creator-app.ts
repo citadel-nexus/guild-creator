@@ -44,6 +44,14 @@ export interface MobileRealmState {
   readonly realm: CreatorRealm;
 }
 
+export interface MobileEngagementTracker {
+  capture(event: 'realm_loaded' | 'realm_unavailable', properties?: Record<string, unknown>): void;
+}
+
+const QUIET_ENGAGEMENT: MobileEngagementTracker = {
+  capture: () => undefined,
+};
+
 function isQuest(value: unknown): value is RealmQuest {
   return (
     typeof value === 'object' &&
@@ -106,6 +114,7 @@ export function initializeCreatorRum(
 export async function loadCreatorRealm(
   fetchRealm: () => Promise<Response> = () => fetch('/realm/creator.json'),
   rum: CreatorRumAdapter = datadogRum,
+  engagement: MobileEngagementTracker = QUIET_ENGAGEMENT,
 ): Promise<MobileRealmState> {
   const startedAt = Date.now();
   try {
@@ -120,9 +129,14 @@ export async function loadCreatorRealm(
       activity_band: candidate.activity_level === 0 ? 'quiet' : 'active',
       quest_count: candidate.quests.length,
     });
+    engagement.capture('realm_loaded', {
+      activity_band: candidate.activity_level === 0 ? 'quiet' : 'active',
+      quest_count: candidate.quests.length,
+    });
     return { available: true, realm: candidate };
   } catch {
     rum.addAction('creator_realm_unavailable');
+    engagement.capture('realm_unavailable');
     return { available: false, realm: createQuietCreatorRealm() };
   }
 }

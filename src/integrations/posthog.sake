@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/posthog.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/posthog.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/posthog.ts
+# DAG Node:    creator.integrations.posthog.sake
+# Intent:      Declare lifecycle ownership for the Creator PostHog adapter.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/posthog.ts
+owner: Muse
+status: active

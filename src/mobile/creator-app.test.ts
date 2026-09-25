@@ -70,6 +70,7 @@ describe('Creator mobile app', () => {
 
   it('loads a validated realm and records bounded vitals', async () => {
     const rum = rumAdapter();
+    const engagement = { capture: vi.fn() };
     const realm = {
       activity_level: 0.5,
       champion: 'Muse',
@@ -79,10 +80,14 @@ describe('Creator mobile app', () => {
     };
 
     await expect(
-      loadCreatorRealm(async () => new Response(JSON.stringify(realm), { status: 200 }), rum),
+      loadCreatorRealm(async () => new Response(JSON.stringify(realm), { status: 200 }), rum, engagement),
     ).resolves.toEqual({ available: true, realm });
     expect(rum.addTiming).toHaveBeenCalledWith('creator_realm_loaded', expect.any(Number));
     expect(rum.addAction).toHaveBeenCalledWith('creator_realm_viewed', {
+      activity_band: 'active',
+      quest_count: 1,
+    });
+    expect(engagement.capture).toHaveBeenCalledWith('realm_loaded', {
       activity_band: 'active',
       quest_count: 1,
     });
@@ -90,9 +95,11 @@ describe('Creator mobile app', () => {
 
   it('degrades invalid or unavailable data to the quiet floor', async () => {
     const rum = rumAdapter();
+    const engagement = { capture: vi.fn() };
     const result = await loadCreatorRealm(
       async () => new Response(JSON.stringify({ guild: 'creator' }), { status: 503 }),
       rum,
+      engagement,
     );
 
     expect(result).toEqual({
@@ -106,5 +113,6 @@ describe('Creator mobile app', () => {
       },
     });
     expect(rum.addAction).toHaveBeenCalledWith('creator_realm_unavailable');
+    expect(engagement.capture).toHaveBeenCalledWith('realm_unavailable');
   });
 });

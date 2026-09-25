@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/n8n-webhook.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/n8n-webhook.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/n8n-webhook.ts
+# DAG Node:    creator.integrations.n8n.sake
+# Intent:      Declare lifecycle ownership for authenticated n8n workflow ingress.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/n8n-webhook.ts
+owner: Muse
+status: active

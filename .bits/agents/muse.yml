@@ -10,7 +10,7 @@
 # Created:     2026-09-25
 # Depends:     CLAUDE.md, .bits/context.md
 # EnumType:    ConfigDoc
-# EnumEdges:   OWNS citadel.creator.*; GATES .bits/agents/writers.yml; GATES .bits/agents/music-studio.yml
+# EnumEdges:   OWNS citadel.creator.*; PRODUCES citadel.guild.comms.creator→finance; PRODUCES citadel.guild.comms.creator→writers; CONSUMES citadel.creator.subguild.writers.status; CONSUMES citadel.creator.subguild.music.status; GATES .bits/agents/writers.yml; GATES .bits/agents/music-studio.yml
 # DAG Node:    creator.agent.muse
 # Intent:      Bound Muse to champion coordination and public Creator floor operations under an active dispatch.
 # ────────────────────────────────────────────────────────────
@@ -34,9 +34,13 @@ seat:
       - citadel.creator.champion
       - citadel.creator.delegation.writers
       - citadel.creator.delegation.music_studio
+      - citadel.guild.comms.creator→finance
+      - citadel.guild.comms.creator→writers
     subscribe:
       - citadel.creator.coordination.writers
       - citadel.creator.coordination.music_studio
+      - citadel.creator.subguild.writers.status
+      - citadel.creator.subguild.music.status
   escalation_target: operator
   health_check_endpoint: /health
   fail_closed: true

@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/mobile/posthog.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/mobile/posthog.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/mobile/posthog.ts
+# DAG Node:    creator.mobile.posthog.sake
+# Intent:      Declare lifecycle ownership for mobile PostHog engagement and flags.
+# ──────────────────────────────────────────────────────────────
+
+module: src/mobile/posthog.ts
+owner: Muse
+status: active

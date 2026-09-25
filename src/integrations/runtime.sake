@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/runtime.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/runtime.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/runtime.ts
+# DAG Node:    creator.integrations.runtime.sake
+# Intent:      Declare lifecycle ownership for the external integration runtime.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/runtime.ts
+owner: Muse
+status: active

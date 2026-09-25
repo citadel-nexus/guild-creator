@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/customerio.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/customerio.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/customerio.ts
+# DAG Node:    creator.integrations.customerio.sake
+# Intent:      Declare lifecycle ownership for dispatch-bound Customer.io hooks.
+# ────────────────────────────────────────────────────────────
+
+module: src/integrations/customerio.ts
+owner: Muse
+status: active

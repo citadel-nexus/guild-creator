@@ -1,116 +1,2537 @@
 {
   "vectors": [
-    {"type":"A","file_path":".bits/agents/muse.yml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["CLAUDE.md",".bits/context.md"],"lines":47,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Bound Muse to champion coordination and public Creator floor operations under an active dispatch.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".bits/agents/music-studio.yml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":[".bits/agents/muse.yml","CLAUDE.md"],"lines":39,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Limit Music Studio coordination to bounded reports and Muse-issued delegations without sibling authority.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".bits/agents/writers.yml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":[".bits/agents/muse.yml","CLAUDE.md"],"lines":39,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Limit Writers coordination to bounded reports and Muse-issued delegations without sibling authority.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".bits/context.md","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["AGENTS.md","CLAUDE.md",".bits/srs_registry.yml"],"lines":80,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Bound the Living-World Floor build to its authorized public TypeScript surfaces and deterministic pre-flight.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":[".bits/out/DISP-LIVINGWORLD-creator/memory.json"],"lines":19,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Provide the CGRF envelope for the dispatch memory ingest payload.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".bits/out/DISP-LIVINGWORLD-creator/memory.json","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":[".bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml"],"lines":116,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Persist substantive file, relationship, and event vectors for the completed Creator living-world dispatch.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".eslintrc.cgrf.yaml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":[".eslintrc.json","tsconfig.json"],"lines":19,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Provide the CGRF envelope for deterministic type-aware TypeScript linting.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".eslintrc.json","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["tsconfig.json"],"lines":38,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Apply strict type-aware lint rules to Creator TypeScript production and test modules.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":".gitignore","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["package.json","tsconfig.json","vitest.config.ts"],"lines":23,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Keep generated dependencies, build output, coverage, and local environment data out of source control.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"CLAUDE.md","cket_stage":"04_HYPOTHESIZE","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["AGENTS.md",".bits/context.md"],"lines":102,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Define deterministic public-safe operating rules for the Creator Guild and its sub-guild coordination.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"package-lock.cgrf.yaml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["package-lock.json","package.json"],"lines":19,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Provide the CGRF envelope for the reproducible public npm dependency lockfile.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"package-lock.json","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["package.json"],"lines":4244,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Lock the audited runtime, telemetry, lint, compiler, and test dependency graph reproducibly.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"package.json","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["dd-trace","hot-shots","nats","@datadog/browser-rum"],"lines":28,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare the public runtime instrumentation and strict build, lint, and coverage toolchain for the Creator service.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"service.datadog.yaml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["src/telemetry/datadog.ts"],"lines":40,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Register the Creator MCP service and Muse ownership in the Datadog service catalog.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/cml-bridge.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["startCmlBridge"],"dependencies":["nats"],"lines":91,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Require explicit dispatch authorization and an injected handler before processing Creator tasks.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/livingworld-emitter.sake","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["src/automation/livingworld-emitter.ts"],"lines":20,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare lifecycle ownership for the Creator floor event publisher module.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/livingworld-emitter.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["createQuietFloorEventPublisher","createNatsFloorEventPublisher","connectFloorEventPublisher"],"dependencies":["nats"],"lines":125,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Publish cleansed Creator floor state changes while degrading to a no-op when NATS is unavailable.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/livingworld-floor.sake","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["src/automation/livingworld-floor.ts"],"lines":20,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare lifecycle ownership for the observed Creator floor state module.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/livingworld-floor.test.ts","cket_stage":"08_TEST","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Test","functions":[],"dependencies":["src/automation/livingworld-floor.ts","src/automation/livingworld-emitter.ts"],"lines":220,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Verify real state transitions emit cleansed events and unavailable publishers retain a quiet floor.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/livingworld-floor.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["createQuietCreatorRealm","LivingWorldFloor"],"dependencies":["src/automation/livingworld-emitter.ts"],"lines":228,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Derive the public Creator floor only from observed state and preserve an honest quiet-floor fallback.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/automation/nats-listener.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["startListener"],"dependencies":["nats"],"lines":46,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Provide an explicit read-only Creator event listener without autonomous side effects.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/index.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["startCreatorService"],"dependencies":["src/routes/realm.ts","src/automation/livingworld-emitter.ts","src/telemetry/datadog.ts"],"lines":90,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Start the public Creator realm service with quiet-floor degradation when NATS is unavailable.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/mobile/creator-app.sake","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["src/mobile/creator-app.ts"],"lines":20,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare lifecycle ownership for the Creator mobile realm and RUM client module.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/mobile/creator-app.test.ts","cket_stage":"08_TEST","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Test","functions":[],"dependencies":["src/mobile/creator-app.ts"],"lines":110,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Verify mobile realm loading, privacy-safe RUM setup, and quiet degradation on invalid data.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/mobile/creator-app.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Widget","functions":["initializeCreatorRum","loadCreatorRealm"],"dependencies":["@datadog/browser-rum","src/automation/livingworld-floor.ts"],"lines":128,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Load the public Creator floor for mobile clients with quiet fallback and privacy-safe RUM vitals.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/routes/realm.sake","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["src/routes/realm.ts"],"lines":20,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare lifecycle ownership for the public Creator realm route module.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/routes/realm.test.ts","cket_stage":"08_TEST","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Test","functions":[],"dependencies":["src/routes/realm.ts","src/automation/livingworld-floor.ts"],"lines":82,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Verify the public GET contracts expose the quiet floor and Muse without accepting writes.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/routes/realm.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Route","functions":["routeCreatorRequest","createRealmRequestListener"],"dependencies":["src/automation/livingworld-floor.ts","src/routes/health.ts"],"lines":63,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Expose the public Creator realm and Muse party bindings as read-only JSON contracts.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/telemetry/datadog.sake","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Schema","functions":[],"dependencies":["src/telemetry/datadog.ts"],"lines":20,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Declare lifecycle ownership for Creator Datadog tracing and metrics.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"stored","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"src/telemetry/datadog.ts","cket_stage":"07_BUILD","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"Service","functions":["createDatadogFloorTelemetry"],"dependencies":["dd-trace","hot-shots","src/automation/livingworld-floor.ts"],"lines":77,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Trace Creator floor operations and report bounded operational metrics without exposing content.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"tsconfig.cgrf.yaml","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["tsconfig.json"],"lines":19,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Provide the CGRF envelope for the strict TypeScript compiler configuration.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"tsconfig.json","cket_stage":"11_COMMIT","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":[],"lines":19,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Compile the Creator service and tests with strict Node ESM TypeScript semantics.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-    {"type":"A","file_path":"vitest.config.ts","cket_stage":"08_TEST","srs_codes":["SRS-CN-CREATOR-LIVINGWORLD-001"],"enum_type":"ConfigDoc","functions":[],"dependencies":["src/automation/livingworld-floor.test.ts","src/routes/realm.test.ts","src/mobile/creator-app.test.ts"],"lines":40,"caps_grade":"pending","ck_stamp":"pending","intent_statement":"Enforce deterministic tests and at least eighty percent coverage on the new floor contract.","objective_id":"DISP-LIVINGWORLD-creator","outcome":"success","supersedes":false,"dispatch_id":"DISP-LIVINGWORLD-creator","seat":"BITS-CODEGEN","domain":"engineering","source_type":"seat_dispatch","tags":["DISP-LIVINGWORLD-creator","BITS-CODEGEN","SRS-CN-CREATOR-LIVINGWORLD-001","living-world"],"tenant_id":null},
-
-    {"type":"B","source":"CLAUDE.md","target":"AGENTS.md","edge_type":"EXTENDS","weight":1.0,"description":"Creator companion governance extends the root agent contract.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"CLAUDE.md","target":"SRS-CN-CREATOR-LIVINGWORLD-001","edge_type":"GATES","weight":1.0,"description":"Creator governance gates the living-world build.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"CLAUDE.md","target":"citadel.creator.*","edge_type":"OWNS","weight":1.0,"description":"Muse governance owns the public Creator namespace.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/context.md","target":"SRS-CN-CREATOR-LIVINGWORLD-001","edge_type":"GATES","weight":1.0,"description":"Sprint scope gates implementation to the registered SRS.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/context.md","target":"CLAUDE.md","edge_type":"DEPENDS_ON","weight":1.0,"description":"Sprint scope inherits Creator governance.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/context.md","target":".bits/queue/DISP-LIVINGWORLD-creator.md","edge_type":"VALIDATES","weight":1.0,"description":"Pre-flight validates the active dispatch.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/muse.yml","target":"citadel.creator.*","edge_type":"OWNS","weight":1.0,"description":"Muse owns bounded Creator coordination subjects.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/muse.yml","target":".bits/agents/writers.yml","edge_type":"GATES","weight":1.0,"description":"Muse gates Writers delegations.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/muse.yml","target":".bits/agents/music-studio.yml","edge_type":"GATES","weight":1.0,"description":"Muse gates Music Studio delegations.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/writers.yml","target":".bits/agents/muse.yml","edge_type":"DEPENDS_ON","weight":1.0,"description":"Writers coordination depends on Muse delegation.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/writers.yml","target":"citadel.creator.coordination.writers","edge_type":"PRODUCES","weight":1.0,"description":"Writers reports bounded coordination results.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/writers.yml","target":"citadel.creator.delegation.writers","edge_type":"CONSUMES","weight":1.0,"description":"Writers consumes only Muse-issued delegations.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/music-studio.yml","target":".bits/agents/muse.yml","edge_type":"DEPENDS_ON","weight":1.0,"description":"Music Studio coordination depends on Muse delegation.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/music-studio.yml","target":"citadel.creator.coordination.music_studio","edge_type":"PRODUCES","weight":1.0,"description":"Music Studio reports bounded coordination results.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/agents/music-studio.yml","target":"citadel.creator.delegation.music_studio","edge_type":"CONSUMES","weight":1.0,"description":"Music Studio consumes only Muse-issued delegations.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".eslintrc.cgrf.yaml","target":".eslintrc.json","edge_type":"OWNS","weight":1.0,"description":"CGRF envelope owns the JSON lint configuration.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".eslintrc.cgrf.yaml","target":"src/","edge_type":"GATES","weight":1.0,"description":"Type-aware linting gates Creator source.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".gitignore","target":"node_modules","edge_type":"GATES","weight":1.0,"description":"Generated dependencies are excluded from commits.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".gitignore","target":"dist","edge_type":"GATES","weight":1.0,"description":"Generated builds are excluded from commits.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".gitignore","target":"coverage","edge_type":"GATES","weight":1.0,"description":"Generated coverage is excluded from commits.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"package-lock.cgrf.yaml","target":"package-lock.json","edge_type":"OWNS","weight":1.0,"description":"CGRF envelope owns the JSON dependency lock.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"package-lock.cgrf.yaml","target":"npm install","edge_type":"GATES","weight":1.0,"description":"The lockfile gates reproducible dependency installation.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"package-lock.cgrf.yaml","target":"package.json","edge_type":"DEPENDS_ON","weight":1.0,"description":"The dependency lock is derived from the package manifest.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"service.datadog.yaml","target":"guild-mcp-creator","edge_type":"OWNS","weight":1.0,"description":"The catalog definition owns the Creator service identity.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"service.datadog.yaml","target":"src/telemetry/datadog.ts","edge_type":"USES_TEMPLATE","weight":1.0,"description":"The catalog definition maps to runtime telemetry.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/cml-bridge.ts","target":"citadel.creator.cml.task","edge_type":"CONSUMES","weight":1.0,"description":"The bridge consumes dispatch-bound tasks.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/cml-bridge.ts","target":"citadel.creator.cml.result","edge_type":"PRODUCES","weight":1.0,"description":"The bridge reports bounded task results.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/cml-bridge.ts","target":"DISP-LIVINGWORLD-creator","edge_type":"GATES","weight":1.0,"description":"Dispatch identity gates task handling.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-emitter.ts","target":"citadel.creator.activity","edge_type":"PRODUCES","weight":1.0,"description":"Observed activity emits the floor heartbeat.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-emitter.ts","target":"citadel.creator.quest","edge_type":"PRODUCES","weight":1.0,"description":"Real quest transitions emit floor markers.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-emitter.ts","target":"citadel.creator.champion","edge_type":"PRODUCES","weight":1.0,"description":"Muse transitions emit champion state.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-emitter.sake","target":"src/automation/livingworld-emitter.ts","edge_type":"OWNS","weight":1.0,"description":"SAKE metadata owns the emitter lifecycle.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.ts","target":"/realm/creator.json","edge_type":"PRODUCES","weight":1.0,"description":"Observed floor state produces the realm model.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.ts","target":"/game/party.json","edge_type":"PRODUCES","weight":1.0,"description":"Champion state produces the party model.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.ts","target":"citadel.creator.*","edge_type":"USES_TEMPLATE","weight":1.0,"description":"Floor state uses the governed Creator event template.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.sake","target":"src/automation/livingworld-floor.ts","edge_type":"OWNS","weight":1.0,"description":"SAKE metadata owns the floor lifecycle.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.test.ts","target":"src/automation/livingworld-floor.ts","edge_type":"VERIFIED_BY","weight":1.0,"description":"Floor behavior is covered by deterministic tests.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/livingworld-floor.test.ts","target":"citadel.creator.*","edge_type":"VALIDATES","weight":1.0,"description":"Tests validate public Creator event contracts.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/automation/nats-listener.ts","target":"citadel.creator.>","edge_type":"CONSUMES","weight":1.0,"description":"The read-only listener consumes Creator namespace events.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/index.ts","target":"citadel.creator.*","edge_type":"CONSUMES","weight":1.0,"description":"The service initializes the Creator namespace adapter.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/index.ts","target":"/realm/creator.json","edge_type":"PRODUCES","weight":1.0,"description":"The service exposes the public realm endpoint.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/index.ts","target":"/game/party.json","edge_type":"PRODUCES","weight":1.0,"description":"The service exposes the Muse party endpoint.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.ts","target":"/realm/creator.json","edge_type":"CONSUMES","weight":1.0,"description":"The mobile client reads the public Creator realm.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.ts","target":"Datadog RUM","edge_type":"PRODUCES","weight":1.0,"description":"The mobile client reports privacy-safe view vitals.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.ts","target":"src/automation/livingworld-floor.ts","edge_type":"USES_TEMPLATE","weight":1.0,"description":"The mobile client reuses the quiet realm contract.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.sake","target":"src/mobile/creator-app.ts","edge_type":"OWNS","weight":1.0,"description":"SAKE metadata owns the mobile client lifecycle.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.test.ts","target":"src/mobile/creator-app.ts","edge_type":"VERIFIED_BY","weight":1.0,"description":"Mobile behavior is covered by deterministic tests.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.test.ts","target":"Datadog RUM","edge_type":"VALIDATES","weight":1.0,"description":"Tests validate privacy-safe RUM configuration.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/mobile/creator-app.test.ts","target":"/realm/creator.json","edge_type":"VALIDATES","weight":1.0,"description":"Tests validate mobile realm loading and fallback.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.ts","target":"/realm/creator.json","edge_type":"PRODUCES","weight":1.0,"description":"The route produces the read-only Creator realm feed.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.ts","target":"/game/party.json","edge_type":"PRODUCES","weight":1.0,"description":"The route produces the Muse party binding.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.ts","target":"/health","edge_type":"PRODUCES","weight":1.0,"description":"The route exposes public service health.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.sake","target":"src/routes/realm.ts","edge_type":"OWNS","weight":1.0,"description":"SAKE metadata owns the realm route lifecycle.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.test.ts","target":"src/routes/realm.ts","edge_type":"VERIFIED_BY","weight":1.0,"description":"Route behavior is covered by deterministic tests.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.test.ts","target":"/realm/creator.json","edge_type":"VALIDATES","weight":1.0,"description":"Tests validate the public Creator realm route.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/routes/realm.test.ts","target":"/game/party.json","edge_type":"VALIDATES","weight":1.0,"description":"Tests validate the Muse party route.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/telemetry/datadog.ts","target":"creator.floor.*","edge_type":"CONSUMES","weight":1.0,"description":"Telemetry consumes bounded floor operation signals.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/telemetry/datadog.ts","target":"Datadog APM","edge_type":"PRODUCES","weight":1.0,"description":"Runtime operations produce APM spans.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/telemetry/datadog.ts","target":"Datadog custom metrics","edge_type":"PRODUCES","weight":1.0,"description":"Runtime operations produce bounded custom metrics.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"src/telemetry/datadog.sake","target":"src/telemetry/datadog.ts","edge_type":"OWNS","weight":1.0,"description":"SAKE metadata owns the telemetry lifecycle.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"tsconfig.cgrf.yaml","target":"tsconfig.json","edge_type":"OWNS","weight":1.0,"description":"CGRF envelope owns the JSON compiler configuration.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"tsconfig.cgrf.yaml","target":"src/","edge_type":"GATES","weight":1.0,"description":"Strict compilation gates Creator source.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"vitest.config.ts","target":"src/","edge_type":"GATES","weight":1.0,"description":"Coverage thresholds gate Creator source.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":"vitest.config.ts","target":"SRS-CN-CREATOR-LIVINGWORLD-001","edge_type":"VALIDATES","weight":1.0,"description":"The suite validates the living-world SRS.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-    {"type":"B","source":".bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml","target":".bits/out/DISP-LIVINGWORLD-creator/memory.json","edge_type":"OWNS","weight":1.0,"description":"CGRF envelope owns the JSON memory payload.","dispatch_id":"DISP-LIVINGWORLD-creator","created_by":"BITS-CODEGEN"},
-
-    {"type":"C","event_type":"test_pass","file_path":"vitest.config.ts","description":"TypeScript build, lint, 21 tests, and coverage thresholds passed after the Vitest security upgrade.","caps_before":null,"caps_after":null,"dag_impact":"Unblocked Creator floor verification.","dispatch_id":"DISP-LIVINGWORLD-creator","timestamp":"2026-09-25T19:18:37Z","commit_sha":null,"smoke_result":"21/21"},
-    {"type":"C","event_type":"smoke_run","file_path":"src/routes/realm.ts","description":"Compiled service returned the quiet Creator realm and Muse party contracts with NATS unavailable.","caps_before":null,"caps_after":null,"dag_impact":"Verified fail-soft public HTTP contracts.","dispatch_id":"DISP-LIVINGWORLD-creator","timestamp":"2026-09-25T19:18:37Z","commit_sha":null,"smoke_result":"2/2"}
+    {
+      "type": "A",
+      "file_path": ".bits/agents/muse.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "CLAUDE.md",
+        ".bits/context.md"
+      ],
+      "lines": 51,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bound Muse to champion coordination and public Creator floor operations under an active dispatch.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/agents/music-studio.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/agents/muse.yml",
+        "CLAUDE.md"
+      ],
+      "lines": 40,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Limit Music Studio coordination to bounded reports and Muse-issued delegations without sibling authority.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/agents/writers.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/agents/muse.yml",
+        "CLAUDE.md"
+      ],
+      "lines": 41,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Limit Writers coordination to bounded reports and Muse-issued delegations without sibling authority.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/context.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        ".bits/srs_registry.yml"
+      ],
+      "lines": 85,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bound the Living-World Floor build to its authorized public TypeScript surfaces and deterministic pre-flight.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/integration-checklist.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/context.md",
+        "src/integrations/runtime.ts"
+      ],
+      "lines": 55,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Make every Creator external dependency, credential boundary, health signal, and quiet fallback explicit.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-LIVINGWORLD-creator/memory.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-LIVINGWORLD-creator/memory.json"
+      ],
+      "lines": 2537,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the dispatch memory ingest payload.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/progression.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/integration-checklist.md",
+        "src/integrations/activity-aggregator.ts"
+      ],
+      "lines": 57,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Define deterministic structure levels from cumulative verified creative output without fabricated progress.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "package-lock.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package-lock.json",
+        "package.json"
+      ],
+      "lines": 4515,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the reproducible public npm dependency lockfile.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "package.json",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "functions": [],
+      "dependencies": [
+        "@datadog/browser-rum",
+        "@supabase/supabase-js",
+        "dd-trace",
+        "hot-shots",
+        "nats",
+        "posthog-js",
+        "posthog-node",
+        "@types/node",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "@vitest/coverage-v8",
+        "eslint",
+        "tsx",
+        "typescript",
+        "vitest"
+      ],
+      "lines": 31,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "sbom.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "sbom.json",
+        "package-lock.json"
+      ],
+      "lines": 25,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bind the generated CycloneDX dependency inventory to the authorized integration dispatch.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "sbom.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "sbom.json",
+        "package-lock.json"
+      ],
+      "lines": 7533,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bind the generated CycloneDX dependency inventory to the authorized integration dispatch.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/index.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Service",
+      "functions": [
+        "startCreatorService"
+      ],
+      "dependencies": [
+        "src/routes/realm.ts",
+        "src/automation/livingworld-emitter.ts",
+        "src/telemetry/datadog.ts",
+        "src/integrations/runtime.ts"
+      ],
+      "lines": 97,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Start the public Creator realm service with quiet-floor degradation when NATS is unavailable.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/activity-aggregator.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/activity-aggregator.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for observed Creator activity aggregation.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/activity-aggregator.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/activity-aggregator.ts"
+      ],
+      "lines": 75,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify activity derives only from deduplicated events and fresh bounded sub-guild reports.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/activity-aggregator.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Service",
+      "functions": [
+        "RealActivityAggregator"
+      ],
+      "dependencies": [
+        "src/automation/livingworld-floor.ts"
+      ],
+      "lines": 137,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Derive floor activity only from deduplicated observed work and fresh sub-guild reports.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/coordinator.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/coordinator.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for authenticated integration event coordination.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/coordinator.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Service",
+      "functions": [
+        "CreatorIntegrationCoordinator"
+      ],
+      "dependencies": [
+        "src/integrations/activity-aggregator.ts",
+        "src/integrations/posthog.ts",
+        "src/integrations/customerio.ts"
+      ],
+      "lines": 145,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Translate authenticated observed integration events into bounded floor, analytics, and notification operations.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/customerio.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/customerio.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for dispatch-bound Customer.io hooks.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/customerio.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "CustomerIoHooks",
+        "createCustomerIoHooksFromEnv"
+      ],
+      "dependencies": [
+        "Customer.io Track API"
+      ],
+      "lines": 118,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Send dispatch-authorized creative notifications using opaque member identifiers and bounded role segments.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/gitlab.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/gitlab.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for the read-only self-hosted GitLab bridge.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/gitlab.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/gitlab.ts",
+        "src/integrations/activity-aggregator.ts"
+      ],
+      "lines": 130,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify GitLab requests remain read-only and private records reduce to public-safe quest metadata.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/gitlab.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "sanitizeCreativeAssetMetadata",
+        "GitLabReadOnlyBridge",
+        "GitLabQuestSync",
+        "createGitLabBridgeFromEnv"
+      ],
+      "dependencies": [
+        "src/integrations/activity-aggregator.ts",
+        "src/automation/livingworld-floor.ts"
+      ],
+      "lines": 264,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Pull only whitelisted GitLab metadata and translate real status changes into public-safe floor state.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/guild-comms-runtime.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/guild-comms.ts",
+        "src/integrations/runtime.ts"
+      ],
+      "lines": 134,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify typed guild messages require dispatch authority and the integration runtime closes quietly without configuration.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/guild-comms.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/guild-comms.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for typed Creator cross-guild communications.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/guild-comms.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "GUILD_COMMS_SUBJECTS",
+        "GuildCommsHandler",
+        "connectGuildCommsTransport"
+      ],
+      "dependencies": [
+        "nats",
+        "src/integrations/activity-aggregator.ts"
+      ],
+      "lines": 204,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Enforce typed parent and cross-guild messages and aggregate only authorized sub-guild status reports.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/n8n-webhook.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/n8n-webhook.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for authenticated n8n workflow ingress.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/n8n-webhook.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "N8nWebhookHandler",
+        "createN8nWebhookFromEnv"
+      ],
+      "dependencies": [
+        "node:crypto"
+      ],
+      "lines": 149,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Authenticate bounded n8n workflow events before they can change public Creator floor state.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/posthog-customerio.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/posthog.ts",
+        "src/integrations/customerio.ts"
+      ],
+      "lines": 121,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify analytics and notification writes require dispatch authorization and fail-closed flags.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/posthog.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/posthog.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for the Creator PostHog adapter.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/posthog.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "CreatorAnalytics",
+        "createCreatorAnalyticsFromEnv"
+      ],
+      "dependencies": [
+        "posthog-node"
+      ],
+      "lines": 113,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Track public-safe guild engagement and fail closed external operations behind PostHog flags.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/runtime.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/runtime.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for the external integration runtime.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/runtime.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Service",
+      "functions": [
+        "startCreatorIntegrations"
+      ],
+      "dependencies": [
+        "src/integrations/coordinator.ts",
+        "src/integrations/gitlab.ts",
+        "src/integrations/supabase.ts",
+        "src/integrations/guild-comms.ts"
+      ],
+      "lines": 106,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Start and stop configured integrations under active-dispatch and feature-flag circuit breakers.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/supabase-n8n.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/supabase.ts",
+        "src/integrations/n8n-webhook.ts",
+        "src/integrations/coordinator.ts"
+      ],
+      "lines": 330,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify private rows and signed workflow events reduce to authorized public floor operations.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/supabase.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/integrations/supabase.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for public-safe Supabase Realtime activity.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/integrations/supabase.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "toPublicSupabaseEvent",
+        "SupabaseCreativeSource",
+        "createSupabaseCreativeSourceFromEnv"
+      ],
+      "dependencies": [
+        "@supabase/supabase-js"
+      ],
+      "lines": 140,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Reduce Supabase Realtime rows to public-safe observed activity identifiers and statuses.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/mobile/creator-app.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/mobile/creator-app.ts"
+      ],
+      "lines": 118,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify mobile realm loading, privacy-safe RUM setup, and quiet degradation on invalid data.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/mobile/creator-app.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Widget",
+      "functions": [
+        "initializeCreatorRum",
+        "loadCreatorRealm"
+      ],
+      "dependencies": [
+        "@datadog/browser-rum",
+        "src/automation/livingworld-floor.ts"
+      ],
+      "lines": 142,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Load the public Creator floor for mobile clients with quiet fallback and privacy-safe RUM vitals.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/mobile/posthog.sake",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Schema",
+      "functions": [],
+      "dependencies": [
+        "src/mobile/posthog.ts"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare lifecycle ownership for mobile PostHog engagement and flags.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/mobile/posthog.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/mobile/posthog.ts"
+      ],
+      "lines": 59,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify mobile analytics segments opaque members and gates optional experiences with PostHog flags.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/mobile/posthog.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Adapter",
+      "functions": [
+        "CreatorMobileAnalytics"
+      ],
+      "dependencies": [
+        "posthog-js",
+        "src/integrations/posthog.ts"
+      ],
+      "lines": 61,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Track role-segmented mobile engagement and fail closed mobile features behind PostHog flags.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/routes/realm.test.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Test",
+      "functions": [],
+      "dependencies": [
+        "src/routes/realm.ts",
+        "src/automation/livingworld-floor.ts",
+        "src/integrations/n8n-webhook.ts"
+      ],
+      "lines": 118,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Verify the public GET contracts expose the quiet floor and Muse without accepting writes.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "src/routes/realm.ts",
+      "cket_stage": "07_BUILD",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "Route",
+      "functions": [
+        "routeCreatorRequest",
+        "createRealmRequestListener"
+      ],
+      "dependencies": [
+        "src/automation/livingworld-floor.ts",
+        "src/routes/health.ts",
+        "src/integrations/n8n-webhook.ts"
+      ],
+      "lines": 113,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Expose the public Creator realm and Muse party bindings as read-only JSON contracts.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "vitest.config.ts",
+      "cket_stage": "08_TEST",
+      "srs_codes": [
+        "SRS-CN-CREATOR-LIVINGWORLD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "src/automation/livingworld-floor.test.ts",
+        "src/routes/realm.test.ts",
+        "src/mobile/creator-app.test.ts"
+      ],
+      "lines": 42,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Enforce deterministic tests and at least eighty percent coverage on the new floor contract.",
+      "objective_id": "DISP-LIVINGWORLD-creator",
+      "outcome": "success",
+      "supersedes": false,
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-LIVINGWORLD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-LIVINGWORLD-001",
+        "creator-integrations"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": "citadel.creator.*",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml owns citadel.creator.*.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": "citadel.guild.comms.creator→finance",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml produces citadel.guild.comms.creator→finance.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": "citadel.guild.comms.creator→writers",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml produces citadel.guild.comms.creator→writers.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": "citadel.creator.subguild.writers.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml consumes citadel.creator.subguild.writers.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": "citadel.creator.subguild.music.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml consumes citadel.creator.subguild.music.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": ".bits/agents/writers.yml",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml gates .bits/agents/writers.yml.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/muse.yml",
+      "target": ".bits/agents/music-studio.yml",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/muse.yml gates .bits/agents/music-studio.yml.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/music-studio.yml",
+      "target": ".bits/agents/muse.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/music-studio.yml depends on .bits/agents/muse.yml.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/music-studio.yml",
+      "target": "citadel.creator.coordination.music_studio",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/music-studio.yml produces citadel.creator.coordination.music_studio.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/music-studio.yml",
+      "target": "citadel.creator.subguild.music.status",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/music-studio.yml produces citadel.creator.subguild.music.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/music-studio.yml",
+      "target": "citadel.creator.delegation.music_studio",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/music-studio.yml consumes citadel.creator.delegation.music_studio.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/writers.yml",
+      "target": ".bits/agents/muse.yml",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/writers.yml depends on .bits/agents/muse.yml.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/writers.yml",
+      "target": "citadel.creator.coordination.writers",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/writers.yml produces citadel.creator.coordination.writers.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/writers.yml",
+      "target": "citadel.creator.subguild.writers.status",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/writers.yml produces citadel.creator.subguild.writers.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/writers.yml",
+      "target": "citadel.creator.delegation.writers",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/writers.yml consumes citadel.creator.delegation.writers.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/agents/writers.yml",
+      "target": "citadel.guild.comms.creator→writers",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/agents/writers.yml consumes citadel.guild.comms.creator→writers.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": "SRS-CN-CREATOR-LIVINGWORLD-001",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/context.md gates SRS-CN-CREATOR-LIVINGWORLD-001.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": "CLAUDE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1,
+      "description": "CGRF declares that .bits/context.md depends on CLAUDE.md.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": ".bits/queue/DISP-LIVINGWORLD-creator.md",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/context.md validates .bits/queue/DISP-LIVINGWORLD-creator.md.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": ".bits/integration-checklist.md",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/context.md gates .bits/integration-checklist.md.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/context.md",
+      "target": ".bits/progression.md",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/context.md gates .bits/progression.md.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/integration-checklist.md",
+      "target": "src/integrations/runtime.ts",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/integration-checklist.md validates src/integrations/runtime.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/integration-checklist.md",
+      "target": "external integration operations",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/integration-checklist.md gates external integration operations.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml",
+      "target": ".bits/out/DISP-LIVINGWORLD-creator/memory.json",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that .bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml owns .bits/out/DISP-LIVINGWORLD-creator/memory.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/progression.md",
+      "target": "creative asset metrics",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/progression.md consumes creative asset metrics.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/progression.md",
+      "target": "lore compilation metrics",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/progression.md consumes lore compilation metrics.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/progression.md",
+      "target": "voice narration metrics",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/progression.md consumes voice narration metrics.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/progression.md",
+      "target": "sub-guild coordination metrics",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that .bits/progression.md consumes sub-guild coordination metrics.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "package-lock.json",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that package-lock.cgrf.yaml owns package-lock.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "npm install",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that package-lock.cgrf.yaml gates npm install.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1,
+      "description": "CGRF declares that package-lock.cgrf.yaml depends on package.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "sbom.cgrf.yaml",
+      "target": "sbom.json",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that sbom.cgrf.yaml validates sbom.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "sbom.cgrf.yaml",
+      "target": "package-lock.json",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that sbom.cgrf.yaml consumes package-lock.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/index.ts",
+      "target": "citadel.creator.*",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/index.ts consumes citadel.creator.*.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/index.ts",
+      "target": "/realm/creator.json",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/index.ts produces /realm/creator.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/index.ts",
+      "target": "/game/party.json",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/index.ts produces /game/party.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/index.ts",
+      "target": "/webhooks/n8n",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/index.ts consumes /webhooks/n8n.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.sake",
+      "target": "src/integrations/activity-aggregator.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.sake owns src/integrations/activity-aggregator.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.test.ts",
+      "target": "src/integrations/activity-aggregator.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.test.ts verified by src/integrations/activity-aggregator.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.test.ts",
+      "target": "citadel.creator.activity",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.test.ts validates citadel.creator.activity.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.ts",
+      "target": "citadel.creator.subguild.writers.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.ts consumes citadel.creator.subguild.writers.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.ts",
+      "target": "citadel.creator.subguild.music.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.ts consumes citadel.creator.subguild.music.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/activity-aggregator.ts",
+      "target": "citadel.creator.activity",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/activity-aggregator.ts produces citadel.creator.activity.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/coordinator.sake",
+      "target": "src/integrations/coordinator.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/coordinator.sake owns src/integrations/coordinator.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/coordinator.ts",
+      "target": "Supabase Realtime",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/coordinator.ts consumes Supabase Realtime.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/coordinator.ts",
+      "target": "/webhooks/n8n",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/coordinator.ts consumes /webhooks/n8n.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/coordinator.ts",
+      "target": "citadel.creator.*",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/coordinator.ts produces citadel.creator.*.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/customerio.sake",
+      "target": "src/integrations/customerio.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/customerio.sake owns src/integrations/customerio.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/customerio.ts",
+      "target": "Customer.io member segments",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/customerio.ts produces Customer.io member segments.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/customerio.ts",
+      "target": "Customer.io creative notifications",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/customerio.ts produces Customer.io creative notifications.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/customerio.ts",
+      "target": "DISP-LIVINGWORLD-creator",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/customerio.ts gates DISP-LIVINGWORLD-creator.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.sake",
+      "target": "src/integrations/gitlab.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.sake owns src/integrations/gitlab.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.test.ts",
+      "target": "src/integrations/gitlab.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.test.ts verified by src/integrations/gitlab.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.test.ts",
+      "target": "GitLab read-only bridge",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.test.ts validates GitLab read-only bridge.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.ts",
+      "target": "GitLab creative asset metadata",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.ts consumes GitLab creative asset metadata.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.ts",
+      "target": "GitLab CI status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.ts consumes GitLab CI status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/gitlab.ts",
+      "target": "GitLab merge request activity",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/gitlab.ts consumes GitLab merge request activity.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms-runtime.test.ts",
+      "target": "src/integrations/guild-comms.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms-runtime.test.ts verified by src/integrations/guild-comms.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms-runtime.test.ts",
+      "target": "src/integrations/runtime.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms-runtime.test.ts verified by src/integrations/runtime.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms-runtime.test.ts",
+      "target": "citadel.guild.comms.creator→finance",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms-runtime.test.ts validates citadel.guild.comms.creator→finance.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms.sake",
+      "target": "src/integrations/guild-comms.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms.sake owns src/integrations/guild-comms.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms.ts",
+      "target": "citadel.creator.subguild.writers.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms.ts consumes citadel.creator.subguild.writers.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms.ts",
+      "target": "citadel.creator.subguild.music.status",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms.ts consumes citadel.creator.subguild.music.status.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms.ts",
+      "target": "citadel.guild.comms.creator→finance",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms.ts produces citadel.guild.comms.creator→finance.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/guild-comms.ts",
+      "target": "citadel.guild.comms.creator→writers",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/guild-comms.ts produces citadel.guild.comms.creator→writers.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/n8n-webhook.sake",
+      "target": "src/integrations/n8n-webhook.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/n8n-webhook.sake owns src/integrations/n8n-webhook.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/n8n-webhook.ts",
+      "target": "/webhooks/n8n",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/n8n-webhook.ts consumes /webhooks/n8n.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/n8n-webhook.ts",
+      "target": "DISP-LIVINGWORLD-creator",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/n8n-webhook.ts gates DISP-LIVINGWORLD-creator.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/n8n-webhook.ts",
+      "target": "citadel.creator.*",
+      "edge_type": "TRIGGERS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/n8n-webhook.ts triggers citadel.creator.*.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog-customerio.test.ts",
+      "target": "src/integrations/posthog.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog-customerio.test.ts verified by src/integrations/posthog.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog-customerio.test.ts",
+      "target": "src/integrations/customerio.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog-customerio.test.ts verified by src/integrations/customerio.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog-customerio.test.ts",
+      "target": "external integration operations",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog-customerio.test.ts validates external integration operations.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog.sake",
+      "target": "src/integrations/posthog.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog.sake owns src/integrations/posthog.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog.ts",
+      "target": "PostHog guild activity",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog.ts produces PostHog guild activity.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog.ts",
+      "target": "PostHog feature flags",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog.ts consumes PostHog feature flags.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/posthog.ts",
+      "target": "external integration operations",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/posthog.ts gates external integration operations.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/runtime.sake",
+      "target": "src/integrations/runtime.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/runtime.sake owns src/integrations/runtime.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/runtime.ts",
+      "target": "external integration operations",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/runtime.ts gates external integration operations.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/runtime.ts",
+      "target": "citadel.creator.*",
+      "edge_type": "TRIGGERS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/runtime.ts triggers citadel.creator.*.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/runtime.ts",
+      "target": "PostHog feature flags",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/runtime.ts consumes PostHog feature flags.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase-n8n.test.ts",
+      "target": "src/integrations/supabase.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase-n8n.test.ts verified by src/integrations/supabase.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase-n8n.test.ts",
+      "target": "src/integrations/n8n-webhook.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase-n8n.test.ts verified by src/integrations/n8n-webhook.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase-n8n.test.ts",
+      "target": "src/integrations/coordinator.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase-n8n.test.ts verified by src/integrations/coordinator.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase.sake",
+      "target": "src/integrations/supabase.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase.sake owns src/integrations/supabase.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase.ts",
+      "target": "lore_entries",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase.ts consumes lore_entries.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase.ts",
+      "target": "creative asset tables",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase.ts consumes creative asset tables.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/integrations/supabase.ts",
+      "target": "book_sessions",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/integrations/supabase.ts consumes book_sessions.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.test.ts",
+      "target": "src/mobile/creator-app.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.test.ts verified by src/mobile/creator-app.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.test.ts",
+      "target": "Datadog RUM",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.test.ts validates Datadog RUM.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.test.ts",
+      "target": "/realm/creator.json",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.test.ts validates /realm/creator.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.ts",
+      "target": "/realm/creator.json",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.ts consumes /realm/creator.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.ts",
+      "target": "Datadog RUM",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.ts produces Datadog RUM.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/creator-app.ts",
+      "target": "src/automation/livingworld-floor.ts",
+      "edge_type": "USES_TEMPLATE",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/creator-app.ts uses template src/automation/livingworld-floor.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/posthog.sake",
+      "target": "src/mobile/posthog.ts",
+      "edge_type": "OWNS",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/posthog.sake owns src/mobile/posthog.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/posthog.test.ts",
+      "target": "src/mobile/posthog.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/posthog.test.ts verified by src/mobile/posthog.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/posthog.test.ts",
+      "target": "PostHog mobile engagement",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/posthog.test.ts validates PostHog mobile engagement.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/posthog.ts",
+      "target": "PostHog mobile engagement",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/posthog.ts produces PostHog mobile engagement.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/mobile/posthog.ts",
+      "target": "PostHog mobile feature flags",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/mobile/posthog.ts consumes PostHog mobile feature flags.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.test.ts",
+      "target": "src/routes/realm.ts",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.test.ts verified by src/routes/realm.ts.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.test.ts",
+      "target": "/realm/creator.json",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.test.ts validates /realm/creator.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.test.ts",
+      "target": "/game/party.json",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.test.ts validates /game/party.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.test.ts",
+      "target": "/webhooks/n8n",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.test.ts validates /webhooks/n8n.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.ts",
+      "target": "/realm/creator.json",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.ts produces /realm/creator.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.ts",
+      "target": "/game/party.json",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.ts produces /game/party.json.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.ts",
+      "target": "/health",
+      "edge_type": "PRODUCES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.ts produces /health.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "src/routes/realm.ts",
+      "target": "/webhooks/n8n",
+      "edge_type": "CONSUMES",
+      "weight": 1,
+      "description": "CGRF declares that src/routes/realm.ts consumes /webhooks/n8n.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "vitest.config.ts",
+      "target": "src/",
+      "edge_type": "GATES",
+      "weight": 1,
+      "description": "CGRF declares that vitest.config.ts gates src/.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "vitest.config.ts",
+      "target": "SRS-CN-CREATOR-LIVINGWORLD-001",
+      "edge_type": "VALIDATES",
+      "weight": 1,
+      "description": "CGRF declares that vitest.config.ts validates SRS-CN-CREATOR-LIVINGWORLD-001.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": "vitest.config.ts",
+      "description": "TypeScript build, strict lint, 58 tests, and all eighty-percent coverage gates passed for the integration phase.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": "Unblocked integration verification and public endpoint smoke testing.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "timestamp": "2026-09-25T19:50:29.797Z",
+      "commit_sha": null,
+      "smoke_result": "58/58"
+    },
+    {
+      "type": "C",
+      "event_type": "smoke_run",
+      "file_path": "src/routes/realm.ts",
+      "description": "Compiled service verified realm, Muse party, unavailable n8n, and invalid-HMAC response contracts.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": "Verified quiet-floor and authenticated automation ingress behavior.",
+      "dispatch_id": "DISP-LIVINGWORLD-creator",
+      "timestamp": "2026-09-25T19:50:29.797Z",
+      "commit_sha": null,
+      "smoke_result": "4/4"
+    }
   ],
   "summary": {
-    "type_a_count": 33,
-    "type_b_count": 65,
+    "type_a_count": 43,
+    "type_b_count": 108,
     "type_c_count": 2,
     "ioo_compliance": true,
     "dkg_orphans": 0,
     "dispatch_id": "DISP-LIVINGWORLD-creator",
-    "srs_codes": ["SRS-CN-CREATOR-LIVINGWORLD-001"],
+    "srs_codes": [
+      "SRS-CN-CREATOR-LIVINGWORLD-001"
+    ],
     "seat": "BITS-CODEGEN"
   }
 }

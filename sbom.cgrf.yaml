@@ -1,0 +1,25 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        sbom.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     sbom.json, package-lock.json
+# EnumType:    Schema
+# EnumEdges:   VALIDATES sbom.json; CONSUMES package-lock.json
+# DAG Node:    creator.sbom.envelope
+# Intent:      Bind the generated CycloneDX dependency inventory to the authorized integration dispatch.
+# ─────────────────────────────────────────────────────────────
+
+artifact: sbom.json
+format: CycloneDX
+spec_version: "1.5"
+generation:
+  source: npm-package-lock
+  scope: required-and-development
+  omitted: optional
+vulnerability_inventory: included
