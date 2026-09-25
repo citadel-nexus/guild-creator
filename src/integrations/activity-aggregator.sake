@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/activity-aggregator.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/activity-aggregator.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/activity-aggregator.ts
+# DAG Node:    creator.integrations.activity.sake
+# Intent:      Declare lifecycle ownership for observed Creator activity aggregation.
+# ────────────────────────────────────────────────────────────
+
+module: src/integrations/activity-aggregator.ts
+owner: Muse
+status: active

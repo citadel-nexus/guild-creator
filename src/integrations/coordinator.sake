@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/coordinator.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/coordinator.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/coordinator.ts
+# DAG Node:    creator.integrations.coordinator.sake
+# Intent:      Declare lifecycle ownership for authenticated integration event coordination.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/coordinator.ts
+owner: Muse
+status: active

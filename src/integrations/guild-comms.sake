@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/guild-comms.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/guild-comms.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/guild-comms.ts
+# DAG Node:    creator.integrations.guild-comms.sake
+# Intent:      Declare lifecycle ownership for typed Creator cross-guild communications.
+# ─────────────────────────────────────────────────────────────
+
+module: src/integrations/guild-comms.ts
+owner: Muse
+status: active

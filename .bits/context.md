@@ -10,7 +10,7 @@
 # Created:     2026-09-25
 # Depends:     AGENTS.md, CLAUDE.md, .bits/srs_registry.yml
 # EnumType:    ConfigDoc
-# EnumEdges:   GATES SRS-CN-CREATOR-LIVINGWORLD-001; DEPENDS_ON CLAUDE.md; VALIDATES .bits/queue/DISP-LIVINGWORLD-creator.md
+# EnumEdges:   GATES SRS-CN-CREATOR-LIVINGWORLD-001; DEPENDS_ON CLAUDE.md; VALIDATES .bits/queue/DISP-LIVINGWORLD-creator.md; GATES .bits/integration-checklist.md; GATES .bits/progression.md
 # DAG Node:    creator.sprint.context
 # Intent:      Bound the Living-World Floor build to its authorized public TypeScript surfaces and deterministic pre-flight.
 # ───────────────────────────────────────────────────────────────
@@ -18,7 +18,7 @@
 # Creator Guild sprint context
 
 - Sprint: Living-World Floor
-- Phase: BUILD
+- Phase: INTEGRATE
 - Dispatch: `DISP-LIVINGWORLD-creator`
 - SRS: `SRS-CN-CREATOR-LIVINGWORLD-001`
 - Branch: `bits/livingworld`
@@ -34,6 +34,11 @@
 - Add deterministic tests for behavior, degradation, and authorization edges.
 - Instrument floor operations with Datadog tracing and custom metrics.
 - Define bounded Muse, Writers, and Music Studio seat coordination.
+- Connect external systems through public-safe, fail-soft adapters.
+- Require active-dispatch authorization for outbound notifications and HMAC
+  authentication for automation webhooks.
+- Aggregate only observed local and sub-guild activity into the floor.
+- Maintain an integration checklist, progression policy, and CycloneDX SBOM.
 
 ## Don't
 

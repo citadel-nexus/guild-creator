@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/integrations/supabase.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/integrations/supabase.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/integrations/supabase.ts
+# DAG Node:    creator.integrations.supabase.sake
+# Intent:      Declare lifecycle ownership for public-safe Supabase Realtime activity.
+# ────────────────────────────────────────────────────────────
+
+module: src/integrations/supabase.ts
+owner: Muse
+status: active

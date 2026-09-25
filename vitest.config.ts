@@ -24,7 +24,9 @@ export default defineConfig({
       include: [
         'src/automation/livingworld-emitter.ts',
         'src/automation/livingworld-floor.ts',
+        'src/integrations/*.ts',
         'src/mobile/creator-app.ts',
+        'src/mobile/posthog.ts',
         'src/routes/realm.ts',
       ],
       provider: 'v8',

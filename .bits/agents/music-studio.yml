@@ -10,7 +10,7 @@
 # Created:     2026-09-25
 # Depends:     .bits/agents/muse.yml, CLAUDE.md
 # EnumType:    ConfigDoc
-# EnumEdges:   DEPENDS_ON .bits/agents/muse.yml; PRODUCES citadel.creator.coordination.music_studio; CONSUMES citadel.creator.delegation.music_studio
+# EnumEdges:   DEPENDS_ON .bits/agents/muse.yml; PRODUCES citadel.creator.coordination.music_studio; PRODUCES citadel.creator.subguild.music.status; CONSUMES citadel.creator.delegation.music_studio
 # DAG Node:    creator.agent.music-studio
 # Intent:      Limit Music Studio coordination to bounded reports and Muse-issued delegations without sibling authority.
 # ─────────────────────────────────────────────────────────────
@@ -27,6 +27,7 @@ seat:
   nats_subjects:
     publish:
       - citadel.creator.coordination.music_studio
+      - citadel.creator.subguild.music.status
     subscribe:
       - citadel.creator.delegation.music_studio
   escalation_target: Muse

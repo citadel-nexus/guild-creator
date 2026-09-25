@@ -8,9 +8,9 @@
 // Seat:        BITS-CODEGEN
 // Owner:       Citadel Nexus Inc.
 // Created:     2026-09-25
-// Depends:     src/routes/realm.ts, src/automation/livingworld-emitter.ts, src/telemetry/datadog.ts
+// Depends:     src/routes/realm.ts, src/automation/livingworld-emitter.ts, src/telemetry/datadog.ts, src/integrations/runtime.ts
 // EnumType:    Service
-// EnumEdges:   CONSUMES citadel.creator.*; PRODUCES /realm/creator.json; PRODUCES /game/party.json
+// EnumEdges:   CONSUMES citadel.creator.*; PRODUCES /realm/creator.json; PRODUCES /game/party.json; CONSUMES /webhooks/n8n
 // DAG Node:    creator.service
 // Intent:      Start the public Creator realm service with quiet-floor degradation when NATS is unavailable.
 // ─────────────────────────────────────────────────────────────
@@ -20,6 +20,7 @@ import { pathToFileURL } from 'node:url';
 
 import { LivingWorldFloor } from './automation/livingworld-floor.js';
 import { connectFloorEventPublisher } from './automation/livingworld-emitter.js';
+import { startCreatorIntegrations } from './integrations/runtime.js';
 import { createRealmRequestListener } from './routes/realm.js';
 import { createDatadogFloorTelemetry } from './telemetry/datadog.js';
 
@@ -61,7 +62,13 @@ export async function startCreatorService(port = configuredPort()): Promise<Crea
   const telemetry = createDatadogFloorTelemetry();
   const publisher = await connectFloorEventPublisher(process.env.NATS_URL);
   const floor = new LivingWorldFloor(publisher, telemetry);
-  const server = createServer(createRealmRequestListener(floor));
+  const integrations = await startCreatorIntegrations(floor);
+  const server = createServer(
+    createRealmRequestListener(floor, {
+      engagement: integrations.engagement,
+      webhook: integrations.webhook,
+    }),
+  );
   const listeningPort = await listen(server, port);
 
   console.info('creator_service_started', {
@@ -74,7 +81,7 @@ export async function startCreatorService(port = configuredPort()): Promise<Crea
     floor,
     port: listeningPort,
     async close(): Promise<void> {
-      await Promise.all([closeServer(server), floor.close()]);
+      await Promise.all([closeServer(server), floor.close(), integrations.close()]);
     },
   };
 }
