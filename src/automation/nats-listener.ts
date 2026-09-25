@@ -1,14 +1,46 @@
-import  connect, StringCodec  from 'nats';
+// ─── CGRF Header ──────────────────────────────
+// File:        src/automation/nats-listener.ts
+// Stage:       07_BUILD
+// SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+// CAPS:        pending
+// CK:          pending
+// Dispatch:    DISP-LIVINGWORLD-creator
+// Seat:        BITS-CODEGEN
+// Owner:       Citadel Nexus Inc.
+// Created:     2026-09-25
+// Depends:     nats
+// EnumType:    Service
+// EnumEdges:   CONSUMES citadel.creator.>
+// DAG Node:    creator.nats.listener
+// Intent:      Provide an explicit read-only Creator event listener without autonomous side effects.
+// ────────────────────────────────────────────────────────────
 
-const sc = StringCodec();
+import { connect, StringCodec } from 'nats';
 
-export async function startListener() {
-  const nc = await connect( servers: process.env.NATS_URL );
-  const sub = nc.subscribe('citadel.creator.>');
-  console.log(`[creator] Listening on citadel.creator.*`);
-  for await (const msg of sub) {
-    const data = sc.decode(msg.data);
-    console.log(`[creator] $msg.subject: $data`);
-    // Route to handlers based on msg.subject
+export const CREATOR_EVENT_WILDCARD = 'citadel.creator.>';
+
+export interface CreatorMessage {
+  readonly subject: string;
+  readonly data: string;
+}
+
+export async function startListener(
+  servers: string | undefined,
+  onMessage: (message: CreatorMessage) => Promise<void>,
+): Promise<void> {
+  if (servers === undefined || servers.length === 0) {
+    return;
+  }
+
+  const connection = await connect({ servers });
+  const codec = StringCodec();
+  const subscription = connection.subscribe(CREATOR_EVENT_WILDCARD);
+
+  try {
+    for await (const message of subscription) {
+      await onMessage({ subject: message.subject, data: codec.decode(message.data) });
+    }
+  } finally {
+    await connection.drain();
   }
 }

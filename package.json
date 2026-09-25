@@ -6,11 +6,23 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
-    "test": "vitest run",
-    "lint": "eslint src/"
+    "test": "vitest run --coverage",
+    "lint": "eslint src/ --ext .ts --max-warnings 0"
   },
   "dependencies": {
-    "@citadel-guilds/sdk": "^0.1.0",
+    "@datadog/browser-rum": "^6.17.0",
+    "dd-trace": "^5.66.0",
+    "hot-shots": "^11.0.0",
     "nats": "^2.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "@vitest/coverage-v8": "^5.0.2",
+    "eslint": "^8.57.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^5.0.2"
   }
 }

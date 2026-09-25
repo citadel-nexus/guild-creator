@@ -1,0 +1,47 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        .bits/agents/muse.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     CLAUDE.md, .bits/context.md
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS citadel.creator.*; GATES .bits/agents/writers.yml; GATES .bits/agents/music-studio.yml
+# DAG Node:    creator.agent.muse
+# Intent:      Bound Muse to champion coordination and public Creator floor operations under an active dispatch.
+# ────────────────────────────────────────────────────────────
+
+version: 1
+seat:
+  name: Muse
+  role: champion_creative_director
+  authority_level: guild_champion
+  capabilities:
+    - realm.read
+    - floor.activity.emit
+    - floor.quest.emit
+    - floor.champion.emit
+    - subguild.delegate
+    - subguild.coordinate
+  nats_subjects:
+    publish:
+      - citadel.creator.activity
+      - citadel.creator.quest
+      - citadel.creator.champion
+      - citadel.creator.delegation.writers
+      - citadel.creator.delegation.music_studio
+    subscribe:
+      - citadel.creator.coordination.writers
+      - citadel.creator.coordination.music_studio
+  escalation_target: operator
+  health_check_endpoint: /health
+  fail_closed: true
+  requires_active_dispatch: true
+  cannot:
+    - write_subguild_repository
+    - expand_dispatch_scope
+    - fabricate_floor_state

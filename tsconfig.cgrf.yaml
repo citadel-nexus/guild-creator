@@ -1,0 +1,19 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        tsconfig.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     tsconfig.json
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS tsconfig.json; GATES src/
+# DAG Node:    creator.typescript.config
+# Intent:      Provide the CGRF envelope for the strict TypeScript compiler configuration.
+# ─────────────────────────────────────────────────────────────
+
+artifact: tsconfig.json
+format: json

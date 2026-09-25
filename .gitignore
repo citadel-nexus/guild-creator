@@ -1,0 +1,23 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        .gitignore
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     package.json, tsconfig.json, vitest.config.ts
+# EnumType:    ConfigDoc
+# EnumEdges:   GATES node_modules; GATES dist; GATES coverage
+# DAG Node:    creator.git.ignore
+# Intent:      Keep generated dependencies, build output, coverage, and local environment data out of source control.
+# ────────────────────────────────────────────────────────────
+
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+*.log
