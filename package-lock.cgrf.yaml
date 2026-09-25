@@ -1,0 +1,19 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        package-lock.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     package-lock.json, package.json
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS package-lock.json; GATES npm install; DEPENDS_ON package.json
+# DAG Node:    creator.dependencies.lock
+# Intent:      Provide the CGRF envelope for the reproducible public npm dependency lockfile.
+# ──────────────────────────────────────────────────────────────
+
+artifact: package-lock.json
+format: json

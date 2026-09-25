@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/telemetry/datadog.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/telemetry/datadog.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/telemetry/datadog.ts
+# DAG Node:    creator.telemetry.sake
+# Intent:      Declare lifecycle ownership for Creator Datadog tracing and metrics.
+# ─────────────────────────────────────────────────────────────
+
+module: src/telemetry/datadog.ts
+owner: Muse
+status: active

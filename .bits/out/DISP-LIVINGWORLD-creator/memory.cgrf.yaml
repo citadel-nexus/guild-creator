@@ -1,0 +1,19 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        .bits/out/DISP-LIVINGWORLD-creator/memory.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     .bits/out/DISP-LIVINGWORLD-creator/memory.json
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS .bits/out/DISP-LIVINGWORLD-creator/memory.json
+# DAG Node:    creator.memory.envelope
+# Intent:      Provide the CGRF envelope for the dispatch memory ingest payload.
+# ─────────────────────────────────────────────────────────────
+
+artifact: .bits/out/DISP-LIVINGWORLD-creator/memory.json
+format: json

@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/automation/livingworld-floor.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/automation/livingworld-floor.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/automation/livingworld-floor.ts
+# DAG Node:    creator.floor.state.sake
+# Intent:      Declare lifecycle ownership for the observed Creator floor state module.
+# ────────────────────────────────────────────────────────────
+
+module: src/automation/livingworld-floor.ts
+owner: Muse
+status: active

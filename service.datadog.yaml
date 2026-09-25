@@ -1,0 +1,40 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        service.datadog.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/telemetry/datadog.ts
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS guild-mcp-creator; USES_TEMPLATE src/telemetry/datadog.ts
+# DAG Node:    creator.service.catalog
+# Intent:      Register the Creator MCP service and Muse ownership in the Datadog service catalog.
+# ─────────────────────────────────────────────────────────────
+
+schema-version: v2.2
+dd-service: guild-mcp-creator
+team: creator-guild
+application: citadel-guilds
+description: Public Creator Guild living-world floor service coordinated by Muse.
+tier: "2"
+lifecycle: development
+languages:
+  - typescript
+type: web
+tags:
+  - guild:creator
+  - seat:muse
+  - srs:SRS-CN-CREATOR-LIVINGWORLD-001
+contacts:
+  - name: Citadel Nexus Inc.
+    type: email
+    contact: support@citadel-nexus.com
+links:
+  - name: Repository
+    type: repo
+    provider: github
+    url: https://github.com/citadel-nexus/guild-creator

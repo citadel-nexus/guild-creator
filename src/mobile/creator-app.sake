@@ -1,0 +1,20 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        src/mobile/creator-app.sake
+# Stage:       07_BUILD
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     src/mobile/creator-app.ts
+# EnumType:    Schema
+# EnumEdges:   OWNS src/mobile/creator-app.ts
+# DAG Node:    creator.mobile.app.sake
+# Intent:      Declare lifecycle ownership for the Creator mobile realm and RUM client module.
+# ─────────────────────────────────────────────────────────────
+
+module: src/mobile/creator-app.ts
+owner: Muse
+status: active

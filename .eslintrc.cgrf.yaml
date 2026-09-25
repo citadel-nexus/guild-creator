@@ -1,0 +1,19 @@
+# ─── CGRF Header ──────────────────────────────
+# File:        .eslintrc.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     .eslintrc.json, tsconfig.json
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS .eslintrc.json; GATES src/
+# DAG Node:    creator.eslint.config
+# Intent:      Provide the CGRF envelope for deterministic type-aware TypeScript linting.
+# ────────────────────────────────────────────────────────────
+
+artifact: .eslintrc.json
+format: json

@@ -1,0 +1,39 @@
+# ─── CGRF Header ───────────────────────────────
+# File:        .bits/agents/writers.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-LIVINGWORLD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-09-25
+# Depends:     .bits/agents/muse.yml, CLAUDE.md
+# EnumType:    ConfigDoc
+# EnumEdges:   DEPENDS_ON .bits/agents/muse.yml; PRODUCES citadel.creator.coordination.writers; CONSUMES citadel.creator.delegation.writers
+# DAG Node:    creator.agent.writers
+# Intent:      Limit Writers coordination to bounded reports and Muse-issued delegations without sibling authority.
+# ─────────────────────────────────────────────────────────────
+
+version: 1
+seat:
+  name: Writers
+  role: subguild_coordination
+  authority_level: delegated_reporter
+  capabilities:
+    - writing.activity.report
+    - creative_direction.request
+    - delegation.result.return
+  nats_subjects:
+    publish:
+      - citadel.creator.coordination.writers
+    subscribe:
+      - citadel.creator.delegation.writers
+  escalation_target: Muse
+  health_check_endpoint: /health
+  fail_closed: true
+  requires_active_dispatch: true
+  cannot:
+    - transition_muse
+    - write_creator_state
+    - delegate_to_music_studio
