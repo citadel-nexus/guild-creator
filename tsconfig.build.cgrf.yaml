@@ -1,0 +1,19 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        tsconfig.build.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     none
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS tsconfig.build.json
+# DAG Node:    creator.build
+# Intent:      Emit only production TypeScript modules at the declared package entrypoint.
+# ───────────────────────────────────────────────────────────────
+
+artifact: tsconfig.build.json
+format: json

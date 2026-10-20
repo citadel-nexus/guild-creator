@@ -1,3 +1,20 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/workflows/security-scan.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     .nvmrc, package.json
+# EnumType:    Workflow
+# EnumEdges:   CONSUMES .nvmrc; CONSUMES package.json
+# DAG Node:    creator.build
+# Intent:      Preserve security scans while building CodeQL input with the supported toolchain.
+# ───────────────────────────────────────────────────────────────
+
 name: Security Scan - guild-creator
 on:
   schedule:
@@ -16,7 +33,11 @@ jobs:
       - uses: github/codeql-action/init@v3
         with:
           languages: javascript
-      - uses: github/codeql-action/autobuild@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: npm ci
+      - run: npm run build
       - uses: github/codeql-action/analyze@v3
   secret-scan:
     runs-on: ubuntu-latest

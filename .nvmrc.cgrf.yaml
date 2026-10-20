@@ -1,0 +1,19 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .nvmrc.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     none
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS .nvmrc
+# DAG Node:    creator.build
+# Intent:      Select the same supported Node runtime for local development and CI.
+# ───────────────────────────────────────────────────────────────
+
+artifact: .nvmrc
+format: node-version

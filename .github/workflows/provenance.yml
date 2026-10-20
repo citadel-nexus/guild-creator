@@ -1,10 +1,10 @@
 # ─── CGRF Header ───────────────────────────────────────────────
 # File:        .github/workflows/provenance.yml
 # Stage:       11_COMMIT
-# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001, SRS-CN-CREATOR-BUILD-001
 # CAPS:        pending
 # CK:          pending
-# Dispatch:    DISP-GOVERNANCE-creator
+# Dispatch:    DISP-BUILD-creator
 # Seat:        BITS-CODEGEN
 # Owner:       Citadel Nexus Inc.
 # Created:     2026-10-20
@@ -37,16 +37,18 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version-file: .nvmrc
       - run: npm ci
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
       - name: Package compiled build
         shell: bash
         run: |
           set -euo pipefail
-          test -s dist/src/index.js
+          test -s dist/index.js
+          test -s dist/index.d.ts
           mkdir -p artifacts
           tar -czf "artifacts/creator-${GITHUB_SHA}.tar.gz" dist package.json package-lock.json
       - name: Upload build for same-run signing

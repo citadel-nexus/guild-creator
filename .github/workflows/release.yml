@@ -1,3 +1,20 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/workflows/release.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     .nvmrc, package.json
+# EnumType:    Workflow
+# EnumEdges:   CONSUMES .nvmrc; CONSUMES package.json
+# DAG Node:    creator.build
+# Intent:      Run Creator build verification with a consistent supported Node runtime.
+# ───────────────────────────────────────────────────────────────
+
 name: Release - guild-creator
 on:
   push:
@@ -13,10 +30,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
           registry-url: 'https://npm.pkg.github.com'
           scope: '@citadel-guilds'
       - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
       - run: npm publish

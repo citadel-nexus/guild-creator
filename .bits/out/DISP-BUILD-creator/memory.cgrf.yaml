@@ -1,0 +1,19 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .bits/out/DISP-BUILD-creator/memory.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     .bits/out/DISP-BUILD-creator/report.md
+# EnumType:    ConfigDoc
+# EnumEdges:   OWNS .bits/out/DISP-BUILD-creator/memory.json; CONSUMES .bits/out/DISP-BUILD-creator/report.md
+# DAG Node:    creator.build
+# Intent:      Provide the governance envelope for build-repair memory evidence.
+# ───────────────────────────────────────────────────────────────
+
+artifact: .bits/out/DISP-BUILD-creator/memory.json
+format: json

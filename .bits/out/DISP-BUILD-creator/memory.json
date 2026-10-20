@@ -1,0 +1,981 @@
+{
+  "entries": [
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-creator/memory.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-BUILD-creator/report.md"
+      ],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the governance envelope for build-repair memory evidence.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-creator/memory.cgrf.yaml",
+      "target": ".bits/out/DISP-BUILD-creator/memory.json",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-creator/memory.cgrf.yaml owns .bits/out/DISP-BUILD-creator/memory.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-creator/memory.cgrf.yaml",
+      "target": ".bits/out/DISP-BUILD-creator/report.md",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-creator/memory.cgrf.yaml consumes .bits/out/DISP-BUILD-creator/report.md.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-creator/memory.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-BUILD-creator/report.md"
+      ],
+      "lines": 981,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the governance envelope for build-repair memory evidence.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-BUILD-creator/report.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        ".github/workflows/provenance.yml"
+      ],
+      "lines": 200,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record actual build-repair evidence and unresolved dependency validation.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-BUILD-creator/report.md",
+      "target": "SRS-CN-CREATOR-BUILD-001",
+      "edge_type": "VALIDATES",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-BUILD-creator/report.md validates SRS-CN-CREATOR-BUILD-001.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/queue/DISP-BUILD-creator.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-CREATOR-BUILD-001.md"
+      ],
+      "lines": 48,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record the operator-authorized build repair and its validation bounds.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/queue/DISP-BUILD-creator.md",
+      "target": "SRS-CN-CREATOR-BUILD-001",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/queue/DISP-BUILD-creator.md gates SRS-CN-CREATOR-BUILD-001.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs/SRS-CN-CREATOR-BUILD-001.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs_registry.yml"
+      ],
+      "lines": 45,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Specify bounded Creator toolchain repair without weakening verification.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-BUILD-001.md",
+      "target": "package.json",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-BUILD-001.md gates package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-BUILD-001.md",
+      "target": ".github/workflows/provenance.yml",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-BUILD-001.md gates .github/workflows/provenance.yml.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs_registry.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 91,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Register the bounded Creator governance bootstrap without changing existing SRS scopes.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": "SRS-CN-CREATOR-GOVERNANCE-001",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml gates SRS-CN-CREATOR-GOVERNANCE-001.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": "SRS-CN-CREATOR-BUILD-001",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml gates SRS-CN-CREATOR-BUILD-001.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/PROVENANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/provenance.yml",
+        "GOVERNANCE.md"
+      ],
+      "lines": 127,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Give consumers an identity-bound verification policy for the exact signed Creator build bytes.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/workflows/provenance.yml",
+      "edge_type": "VALIDATES",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md validates .github/workflows/provenance.yml.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": "creator-signed build archive",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md consumes creator-signed build archive.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/ci.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc",
+        "package.json"
+      ],
+      "lines": 63,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Run Creator build verification with a consistent supported Node runtime.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/ci.yml",
+      "target": ".nvmrc",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/ci.yml consumes .nvmrc.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/ci.yml",
+      "target": "package.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/ci.yml consumes package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/provenance.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json"
+      ],
+      "lines": 99,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bind validated Creator build archives to trusted main workflow identity with signed SLSA provenance.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "package.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml consumes package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "package-lock.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml consumes package-lock.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "creator-signed build archive",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml produces creator-signed build archive.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml verified_by .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/release.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc",
+        "package.json"
+      ],
+      "lines": 47,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Run Creator build verification with a consistent supported Node runtime.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/release.yml",
+      "target": ".nvmrc",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/release.yml consumes .nvmrc.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/release.yml",
+      "target": "package.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/release.yml consumes package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/security-scan.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc",
+        "package.json"
+      ],
+      "lines": 61,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Preserve security scans while building CodeQL input with the supported toolchain.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/security-scan.yml",
+      "target": ".nvmrc",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/security-scan.yml consumes .nvmrc.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/security-scan.yml",
+      "target": "package.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/security-scan.yml consumes package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".nvmrc",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 1,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Select the same supported Node runtime for local development and CI.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".nvmrc.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Select the same supported Node runtime for local development and CI.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".nvmrc.cgrf.yaml",
+      "target": ".nvmrc",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": ".nvmrc.cgrf.yaml owns .nvmrc.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "package-lock.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package-lock.json",
+        "package.json"
+      ],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the reproducible public npm dependency lockfile.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "package-lock.json",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": "package-lock.cgrf.yaml owns package-lock.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "npm install",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": "package-lock.cgrf.yaml gates npm install.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "package-lock.cgrf.yaml",
+      "target": "package.json",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "package-lock.cgrf.yaml depends_on package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "package-lock.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "package-lock.json",
+        "package.json"
+      ],
+      "lines": 4528,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the reproducible public npm dependency lockfile.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "package.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare a complete dependency graph and deterministic local lint and build commands.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "package.cgrf.yaml",
+      "target": "package.json",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": "package.cgrf.yaml owns package.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "package.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 37,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Declare a complete dependency graph and deterministic local lint and build commands.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.build.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Emit only production TypeScript modules at the declared package entrypoint.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "tsconfig.build.cgrf.yaml",
+      "target": "tsconfig.build.json",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": "tsconfig.build.cgrf.yaml owns tsconfig.build.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.build.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 14,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Emit only production TypeScript modules at the declared package entrypoint.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "tsconfig.json"
+      ],
+      "lines": 19,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the strict TypeScript compiler configuration.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "tsconfig.cgrf.yaml",
+      "target": "tsconfig.json",
+      "edge_type": "OWNS",
+      "weight": 1.0,
+      "description": "tsconfig.cgrf.yaml owns tsconfig.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "tsconfig.cgrf.yaml",
+      "target": "src/",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": "tsconfig.cgrf.yaml gates src/.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "tsconfig.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "tsconfig.json"
+      ],
+      "lines": 30,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the strict TypeScript compiler configuration.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": "package-lock.json",
+      "description": "Offline npm lockfile synchronization and npm ci dry-run pass after pinning the missing API; actual archive installation remains blocked.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-creator",
+      "timestamp": "2026-10-20T17:58:49.978362+00:00",
+      "commit_sha": null,
+      "smoke_result": "dry-run passed"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".github/workflows/provenance.yml",
+      "description": "Workflow/packaging assertions pass; security scans and signing restrictions remain; fixture packaging requires runtime and declaration output.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-creator",
+      "timestamp": "2026-10-20T17:58:49.978362+00:00",
+      "commit_sha": null,
+      "smoke_result": "static checks passed"
+    },
+    {
+      "type": "C",
+      "event_type": "test_fail",
+      "file_path": "package.json",
+      "description": "npm ci fails ENOTCACHED; local lint, typecheck, test, and build cannot execute without dependencies.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-creator",
+      "timestamp": "2026-10-20T17:58:49.978362+00:00",
+      "commit_sha": null,
+      "smoke_result": "0/5 required checks"
+    }
+  ],
+  "summary": {
+    "type_a_count": 21,
+    "type_b_count": 28,
+    "type_c_count": 3,
+    "ioo_compliance": true,
+    "dkg_orphans": 0,
+    "dispatch_id": "DISP-BUILD-creator",
+    "srs_codes": [
+      "SRS-CN-CREATOR-BUILD-001"
+    ],
+    "seat": "BITS-CODEGEN"
+  }
+}
