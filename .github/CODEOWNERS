@@ -1,1 +1,23 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/CODEOWNERS
+# Stage:       06_PLAN
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     GOVERNANCE.md
+# EnumType:    ConfigDoc
+# EnumEdges:   GATES GOVERNANCE.md
+# DAG Node:    creator.governance
+# Intent:      Route Creator changes to its GitHub owner team under Muse accountability.
+# ───────────────────────────────────────────────────────────────
+
+# Accountable guildmaster: Muse (GitLab user: muse).
+# GitHub review owner: existing Creator Guild team below; admins must confirm
+# that Muse's verified GitHub account belongs to this visible team with write access.
+# Do not infer a GitHub account from the GitLab username or Datadog team handle.
+# See GOVERNANCE.md for the owner identity and approval activation checklist.
 * @citadel-nexus/creator-guild

@@ -1,0 +1,559 @@
+{
+  "entries": [
+    {
+      "type": "A",
+      "file_path": ".bits/srs_registry.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [],
+      "lines": 61,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Register the bounded Creator governance bootstrap without changing existing SRS scopes.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs_registry.yml",
+      "target": "SRS-CN-CREATOR-GOVERNANCE-001",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs_registry.yml gates SRS-CN-CREATOR-GOVERNANCE-001.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md",
+      "cket_stage": "04_HYPOTHESIZE",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs_registry.yml"
+      ],
+      "lines": 65,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Specify accountable Creator ownership and verifiable signed build archives.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md gates .github/CODEOWNERS.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md",
+      "target": "GOVERNANCE.md",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md gates GOVERNANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md",
+      "target": ".github/workflows/provenance.yml",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md gates .github/workflows/provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md gates .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/queue/DISP-GOVERNANCE-creator.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md"
+      ],
+      "lines": 77,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Record the operator authorization and bounded staging tasks for Creator governance.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/queue/DISP-GOVERNANCE-creator.md",
+      "target": "SRS-CN-CREATOR-GOVERNANCE-001",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".bits/queue/DISP-GOVERNANCE-creator.md gates SRS-CN-CREATOR-GOVERNANCE-001.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/CODEOWNERS",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        "GOVERNANCE.md"
+      ],
+      "lines": 23,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Route Creator changes to its GitHub owner team under Muse accountability.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/CODEOWNERS",
+      "target": "GOVERNANCE.md",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": ".github/CODEOWNERS gates GOVERNANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": "GOVERNANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/CODEOWNERS",
+        ".github/PROVENANCE.md"
+      ],
+      "lines": 122,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Make Creator ownership decisions and administrator-enforced review policy explicit.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": "GOVERNANCE.md",
+      "target": ".github/CODEOWNERS",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "GOVERNANCE.md depends_on .github/CODEOWNERS.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "GOVERNANCE.md",
+      "target": ".github/workflows/provenance.yml",
+      "edge_type": "GATES",
+      "weight": 1.0,
+      "description": "GOVERNANCE.md gates .github/workflows/provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": "GOVERNANCE.md",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": "GOVERNANCE.md depends_on .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/provenance.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json"
+      ],
+      "lines": 97,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Bind validated Creator build archives to trusted main workflow identity with signed SLSA provenance.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "package.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml consumes package.json.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "package-lock.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml consumes package-lock.json.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": "creator-signed build archive",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml produces creator-signed build archive.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/provenance.yml",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1.0,
+      "description": ".github/workflows/provenance.yml verified_by .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/PROVENANCE.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/provenance.yml",
+        "GOVERNANCE.md"
+      ],
+      "lines": 124,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Give consumers an identity-bound verification policy for the exact signed Creator build bytes.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/workflows/provenance.yml",
+      "edge_type": "VALIDATES",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md validates .github/workflows/provenance.yml.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": "creator-signed build archive",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md consumes creator-signed build archive.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-creator/report.md",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/provenance.yml",
+        ".github/PROVENANCE.md"
+      ],
+      "lines": 263,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Preserve reproducible governance validation evidence and unresolved merge gates.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-creator/report.md",
+      "target": "SRS-CN-CREATOR-GOVERNANCE-001",
+      "edge_type": "VALIDATES",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-creator/report.md validates SRS-CN-CREATOR-GOVERNANCE-001.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-GOVERNANCE-creator/report.md"
+      ],
+      "lines": 20,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Provide the CGRF envelope for the dispatch memory JSON and its validation evidence.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "stored",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml",
+      "target": ".bits/out/DISP-GOVERNANCE-creator/memory.json",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml produces .bits/out/DISP-GOVERNANCE-creator/memory.json.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml",
+      "target": ".bits/out/DISP-GOVERNANCE-creator/report.md",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml consumes .bits/out/DISP-GOVERNANCE-creator/report.md.",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "A",
+      "file_path": ".bits/out/DISP-GOVERNANCE-creator/memory.json",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-GOVERNANCE-001"
+      ],
+      "enum_type": "ConfigDoc",
+      "functions": [],
+      "dependencies": [
+        ".bits/out/DISP-GOVERNANCE-creator/report.md",
+        ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml"
+      ],
+      "lines": 559,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Preserve file provenance, declared relationships, and actual validation outcomes for the Creator governance bootstrap.",
+      "objective_id": "DISP-GOVERNANCE-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-GOVERNANCE-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-GOVERNANCE-001",
+        "governance-provenance"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".github/workflows/provenance.yml",
+      "description": "Static workflow trust/artifact assertions and Bash/CLI verification checks passed; no live attestation was issued.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": "Creator governance static review",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "timestamp": "2026-10-20T17:33:54.557447+00:00",
+      "commit_sha": null,
+      "smoke_result": "static checks passed"
+    },
+    {
+      "type": "C",
+      "event_type": "test_fail",
+      "file_path": "package-lock.json",
+      "description": "Offline npm ci failed resolving existing lockfile peers; lint/test/build could not pass without local dependencies. No out-of-scope dependency change applied.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": "Merge readiness remains blocked",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "timestamp": "2026-10-20T17:33:54.557447+00:00",
+      "commit_sha": null,
+      "smoke_result": "0/4 dependency and application checks"
+    },
+    {
+      "type": "C",
+      "event_type": "smoke_run",
+      "file_path": ".bits/out/DISP-GOVERNANCE-creator/report.md",
+      "description": "Recorded runnable static validation and pending live OIDC/attestation verification for operator review.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "timestamp": "2026-10-20T17:33:54.557447+00:00",
+      "commit_sha": null,
+      "smoke_result": "4/8"
+    }
+  ],
+  "summary": {
+    "type_a_count": 10,
+    "type_b_count": 19,
+    "type_c_count": 3,
+    "ioo_compliance": true,
+    "dkg_orphans": 0,
+    "dispatch_id": "DISP-GOVERNANCE-creator",
+    "srs_codes": [
+      "SRS-CN-CREATOR-GOVERNANCE-001"
+    ],
+    "seat": "BITS-CODEGEN"
+  }
+}

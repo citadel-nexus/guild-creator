@@ -1,0 +1,20 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     .bits/out/DISP-GOVERNANCE-creator/report.md
+# EnumType:    ConfigDoc
+# EnumEdges:   PRODUCES .bits/out/DISP-GOVERNANCE-creator/memory.json; CONSUMES .bits/out/DISP-GOVERNANCE-creator/report.md
+# DAG Node:    creator.governance
+# Intent:      Provide the CGRF envelope for the dispatch memory JSON and its validation evidence.
+# ───────────────────────────────────────────────────────────────
+
+governs: .bits/out/DISP-GOVERNANCE-creator/memory.json
+format: three-type-memory
+ioo_required: true
