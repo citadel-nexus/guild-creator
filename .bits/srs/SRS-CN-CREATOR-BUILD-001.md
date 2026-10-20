@@ -38,8 +38,20 @@ restrictions. Governance PR #18 is merged and is the base, not part of this PR.
 
 ## Bounds
 
-One new branch and PR: bits/SRS-CN-CREATOR-BUILD-001-toolchain.
+Logical build work: bits/SRS-CN-CREATOR-BUILD-001-toolchain.
+The operator-authorized continuation uses the session-bound publication branch
+dd/bits/SRS-CN-CREATOR-GOVERNANCE-001-provenance, based on merged PR #19.
 No production/deployment operations, main push, settings or secrets changes.
 Existing release/publishing workflows may receive build repairs but must not be
 executed during this session. No guessed success when dependencies cannot be
 installed; retain exact failed commands and scope the remaining validation.
+
+## Continuation acceptance
+
+- Manual-only lockfile refresh on the default branch, pinned actions, scoped
+  registry auth, no main writes, and a lockfile-only PR on bits/lockfile-refresh
+  only after all five gates pass. Never overwrite an existing refresh branch.
+- Verify real provenance before artifact publication; tampered bytes and an
+  incorrect signer workflow must be rejected. Keep existing signing boundaries.
+- Document registry/GitHub administration prerequisites without changing settings
+  or secrets, and rerun offline checks with explicit blocked results as needed.

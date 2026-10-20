@@ -88,6 +88,35 @@ jobs:
           set -euo pipefail
           test -s "$BUNDLE_PATH"
           install -m 0644 "$BUNDLE_PATH" "artifacts/creator-${GITHUB_SHA}.sigstore.json"
+      - name: Verify provenance and reject invalid artifacts and identities
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARCHIVE="artifacts/creator-${GITHUB_SHA}.tar.gz"
+          BUNDLE="artifacts/creator-${GITHUB_SHA}.sigstore.json"
+          SIGNER="${GITHUB_REPOSITORY}/.github/workflows/provenance.yml"
+          POLICY=(--bundle "$BUNDLE" --repo "$GITHUB_REPOSITORY"
+            --source-ref refs/heads/main --source-digest "$GITHUB_SHA"
+            --predicate-type https://slsa.dev/provenance/v1
+            --cert-oidc-issuer https://token.actions.githubusercontent.com
+            --deny-self-hosted-runners)
+          gh attestation verify "$ARCHIVE" "${POLICY[@]}" --signer-workflow "$SIGNER"
+          TAMPERED="${RUNNER_TEMP}/creator-tampered.tar.gz"
+          cp "$ARCHIVE" "$TAMPERED"
+          printf '\ntampered\n' >> "$TAMPERED"
+          if gh attestation verify "$TAMPERED" "${POLICY[@]}" --signer-workflow "$SIGNER"; then
+            echo 'FAIL: tampered artifact was accepted' >&2
+            exit 1
+          fi
+          if gh attestation verify "$ARCHIVE" "${POLICY[@]}" \
+            --signer-workflow "${GITHUB_REPOSITORY}/.github/workflows/not-provenance.yml"; then
+            echo 'FAIL: wrong signer identity was accepted' >&2
+            exit 1
+          fi
+          # Recheck the valid control so an ongoing verifier outage fails the job.
+          gh attestation verify "$ARCHIVE" "${POLICY[@]}" --signer-workflow "$SIGNER"
       - name: Upload signed archive and bundle
         uses: actions/upload-artifact@v4
         with:

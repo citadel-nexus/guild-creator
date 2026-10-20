@@ -1,0 +1,163 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/workflows/lockfile-refresh.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-BUILD-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-BUILD-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     .nvmrc, package.json, package-lock.json
+# EnumType:    Workflow
+# EnumEdges:   CONSUMES .nvmrc; CONSUMES package-lock.json; VERIFIED_BY .github/BUILD.md
+# DAG Node:    creator.build
+# Intent:      Refresh real registry integrity and propose a lockfile-only PR after all build gates pass.
+# ───────────────────────────────────────────────────────────────
+
+name: Refresh Creator lockfile
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: creator-lockfile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      packages: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://npm.pkg.github.com
+          scope: '@citadel-guilds'
+      - name: Refresh registry metadata and integrity
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Evict incomplete entries so npm obtains metadata from the registry.
+          node --input-type=module <<'JS'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          const path = 'package-lock.json';
+          const lock = JSON.parse(readFileSync(path, 'utf8'));
+          for (const [name, entry] of Object.entries(lock.packages)) {
+            if (/^https?:/.test(entry.resolved ?? '') && !entry.integrity) {
+              delete lock.packages[name];
+            }
+          }
+          writeFileSync(path, JSON.stringify(lock, null, 2) + '\n');
+          JS
+          npm install --package-lock-only --ignore-scripts
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { readFileSync } from 'node:fs';
+          const lock = JSON.parse(readFileSync('package-lock.json', 'utf8'));
+          assert.equal(lock.packages['node_modules/@opentelemetry/api'].version, '1.9.0');
+          for (const [name, entry] of Object.entries(lock.packages)) {
+            if (/^https?:/.test(entry.resolved ?? '')) {
+              assert.match(entry.integrity ?? '', /^sha(?:256|384|512)-[A-Za-z0-9+/=]+$/, name);
+            }
+          }
+          JS
+      - name: Validate regenerated lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+        run: npm ci && npm run lint && npm run typecheck && npm test && npm run build
+      - name: Open lockfile-only pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- . ':!package-lock.json'
+          if git diff --quiet -- package-lock.json; then
+            echo 'Lockfile already has current metadata; no PR required.'
+            exit 0
+          fi
+          # Ref creation fails if the fixed branch exists; never overwrite it.
+          gh api "repos/${GITHUB_REPOSITORY}/git/refs" --method POST \
+            -f ref=refs/heads/bits/lockfile-refresh \
+            -f sha="$(git rev-parse HEAD)" > /dev/null
+          export LOCKFILE_BLOB_SHA="$(git rev-parse HEAD:package-lock.json)"
+          PAYLOAD="${RUNNER_TEMP}/lockfile-update.json"
+          export PAYLOAD
+          node --input-type=module <<'JS'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          writeFileSync(process.env.PAYLOAD, JSON.stringify({
+            branch: 'bits/lockfile-refresh',
+            sha: process.env.LOCKFILE_BLOB_SHA,
+            content: readFileSync('package-lock.json').toString('base64'),
+            message: 'fix(ci): refresh Creator lockfile integrity\n\n' +
+              'Resolve registry metadata and validate the complete build before review.\n\n' +
+              'Phase: D\nFiles: package-lock.json\nSmoke: 5/5 passing\n' +
+              'SRS: SRS-CN-CREATOR-BUILD-001\nDispatch: DISP-BUILD-creator\nCK: pending',
+          }));
+          JS
+          # GitHub creates the file commit using the authenticated workflow identity.
+          gh api "repos/${GITHUB_REPOSITORY}/contents/package-lock.json" \
+            --method PUT --input "$PAYLOAD" > /dev/null
+          BODY="${RUNNER_TEMP}/lockfile-pr.md"
+          cat > "$BODY" <<'MARKDOWN'
+          ## Summary
+
+          Refresh registry-derived lockfile integrity metadata for reproducible installs.
+
+          ## Changes
+
+          Only package-lock.json changes. No dependency declaration, test, or gate is weakened.
+
+          ## Testing
+
+          npm ci, lint, typecheck, tests, and build passed before this PR was created.
+          Review the registry version/integrity diff and rerun PR checks before merge.
+
+          ## SRS Code
+
+          SRS: SRS-CN-CREATOR-BUILD-001
+          Dispatch: DISP-BUILD-creator
+
+          ## Type of Change
+
+          - [ ] feat — new feature
+          - [x] fix — bug fix
+          - [ ] docs — documentation only
+          - [ ] chore — maintenance, refactor
+
+          ## Checklist
+
+          - [ ] SRS code referenced in branch name and commit
+          - [x] `npm test` passes
+          - [x] `npm run lint` passes
+          - [x] No private CNWB package imports
+          - [x] No hardcoded NATS subjects or Supabase URLs
+          - [x] No credentials or secrets in code
+          - [ ] SAKE file stub added for new modules
+          - [ ] Reviewed by at least 1 guild member
+
+          Branch name is operator-specified; no new module needs a SAKE stub.
+
+          ## Related Issues
+
+          Continuation of DISP-BUILD-creator; no issue number supplied.
+          MARKDOWN
+          gh pr create --repo "$GITHUB_REPOSITORY" --base "$DEFAULT_BRANCH" \
+            --head bits/lockfile-refresh \
+            --title 'fix(ci): refresh lockfile [SRS-CN-CREATOR-BUILD-001] [Dispatch:DISP-BUILD-creator]' \
+            --body-file "$BODY"
