@@ -24,17 +24,19 @@ and media, and the Creator Floor. It coordinates creative direction for the
 Writers and Music Studio sub-guilds without assuming their repository ownership.
 
 - **Guildmaster:** Muse, GitLab user `muse`.
-- **Datadog team:** `guild-creator` (observability ownership, not a GitHub team).
-- **GitHub code-owner team:** `@citadel-nexus/creator-guild`, retained from the
-  existing CODEOWNERS. Muse is the accountable owner through this team.
+- **Datadog team:** `guild-creator` (observability ownership).
+- **GitHub guildmaster/code-owner team:** `@citadel-nexus/guild-creator`
+  (https://github.com/orgs/citadel-nexus/teams/guild-creator).
+- **Muse automation identity:** GitHub App `muse-creator-guildmaster`
+  (https://github.com/apps/muse-creator-guildmaster).
 - **Escalation authority:** the guildmasters group; unresolved organization-level
   authorization or policy decisions go to the operator.
 
-A GitLab username does not establish a GitHub identity. Before enabling required
-code-owner reviews, an administrator must verify Muse's GitHub account, include
-it in the visible code-owner team, and grant that team explicit write access.
-Do not substitute an unverified `@muse` account. CODEOWNERS team membership and
-eligibility must be confirmed in GitHub; this change does not grant access.
+The operator confirmed this GitHub team and App through the Datadog
+`guild-creator` team links. GitHub Apps cannot be code owners: the confirmed
+team owns reviews, while the App identifies Muse's automation. Before enabling
+required code-owner reviews, an administrator must ensure the team is visible
+and has explicit write access. This documentation does not grant access.
 
 ## Decisions and approvals
 
@@ -78,6 +80,14 @@ An authorized GitHub administrator must create an **active branch ruleset** for
 | Required check contexts | `build` (existing CI) and `provenance-build` (new Provenance workflow); source: GitHub Actions |
 | Protected history | Block force pushes and branch deletion |
 | Enforcement | No standing bypass actors, including administrators; include administrators in legacy protection |
+
+**Expected guildmaster automation actor:** the operator-confirmed GitHub App
+`muse-creator-guildmaster` (https://github.com/apps/muse-creator-guildmaster).
+Use this identity when reviewing guildmaster automation against the ruleset.
+It has no standing bypass permission and remains subject to required reviews,
+signed commits, and status checks. Its activity does not replace approval by a
+member of `@citadel-nexus/guild-creator`. Required build checks still come from
+GitHub Actions; the Muse App is not their expected status-check source.
 
 Populate the check contexts after they have actually appeared on a PR and verify
 that they originate from the expected workflows. The existing `build` check and

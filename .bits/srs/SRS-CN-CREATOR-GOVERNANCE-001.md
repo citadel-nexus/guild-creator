@@ -37,9 +37,10 @@ GitHub settings, secrets, signing-key, or direct-main-write authority.
 
 ## Acceptance criteria
 
-1. CODEOWNERS retains a GitHub-valid ownership mechanism and names Muse as the
-   accountable guildmaster. A GitLab username must not be assumed to identify
-   the same person on GitHub. Document any identity/team validation admin work.
+1. CODEOWNERS names the operator-confirmed `@citadel-nexus/guild-creator` team
+   as Muse's guildmaster owner. Record `muse-creator-guildmaster` as Muse's GitHub
+   App automation identity and the expected actor in ruleset documentation.
+   Apps cannot be code owners and receive no standing ruleset bypass.
 2. GOVERNANCE.md defines the Creator tools, media, and Creator Floor charter,
    decision and approval rules, and escalation to the guildmasters group.
 3. Document default-branch code-owner review, signed commits, required checks,

@@ -33,7 +33,7 @@
 | Task | Status | Output | Verify | CKET |
 | --- | --- | --- | --- | --- |
 | A — bootstrap | PASS | Registered operator-authorized SRS and in-progress dispatch | Static smoke block below | 04_HYPOTHESIZE, 11_COMMIT |
-| B — ownership | PASS | Muse accountability, retained GitHub owner team, admin protection specification | Static smoke and GOVERNANCE.md review | 06_PLAN |
+| B — ownership | PASS | Muse accountability, confirmed GitHub owner team/App, admin protection specification | Static smoke and GOVERNANCE.md review | 06_PLAN |
 | C — provenance | PASS (static) | Main-only signing, PR build validation, digest/identity verification guide | Static smoke block below | 11_COMMIT, 06_PLAN |
 | D — validation | PARTIAL | Static checks pass; install/lint/test/build fail locally; live signing pending | Commands and evidence below | 11_COMMIT |
 
@@ -71,6 +71,15 @@ It validates packaging behavior and digest sensitivity, not successful app
 compilation, an issued attestation, or cryptographic verification. The real
 GitHub OIDC/signing and positive/negative verifier acceptance remain pending a
 successful trusted main run after merge, per .github/PROVENANCE.md.
+
+### Confirmed identity follow-up
+
+The operator confirmed `@citadel-nexus/guild-creator` and the
+`muse-creator-guildmaster` App. CODEOWNERS assigns only the team; the ruleset
+specification names the App as the expected guildmaster automation actor with
+no standing bypass. The identity-confirmation follow-up is closed. Static checks
+below cover this mapping. Application checks were not rerun for this ownership
+and documentation-only follow-up; their previously recorded blockers remain.
 
 ### Reproduce static checks
 
@@ -174,7 +183,14 @@ registry = yaml.safe_load(Path('.bits/srs_registry.yml').read_text())
 assert registry[srs]['dispatch'] == dispatch
 assert '- status: in_progress' in Path(f'.bits/queue/{dispatch}.md').read_text()
 assert 'authorization_source: authenticated operator Dmitry Richard' in Path(f'.bits/queue/{dispatch}.md').read_text()
-assert '* @citadel-nexus/creator-guild' in Path('.github/CODEOWNERS').read_text()
+owners = [line for line in Path('.github/CODEOWNERS').read_text().splitlines() if line and not line.startswith('#')]
+assert owners == ['* @citadel-nexus/guild-creator']
+governance = Path('GOVERNANCE.md').read_text()
+assert '**Muse automation identity:** GitHub App `muse-creator-guildmaster`' in governance
+ruleset = governance.split('## Default-branch protection: administrator action required')[1].split('## Actions and provenance activation')[0]
+assert '**Expected guildmaster automation actor:**' in ruleset
+assert '`muse-creator-guildmaster`' in ruleset
+assert 'no standing bypass permission' in ruleset
 assert 'Guildmaster:** Muse' in Path('GOVERNANCE.md').read_text()
 memory = json.loads(Path(f'.bits/out/{dispatch}/memory.json').read_text())
 entries = memory['entries']
@@ -218,7 +234,7 @@ PYTHON
 
 - Type A count: 10 (one per touched file).
 - Type B count: 19 (exactly the CGRF-declared relationships).
-- Type C count: 3 (real timestamped validation observations; no invented commit).
+- Type C count: 4 (real timestamped validation observations; no invented commit).
 - IOO compliance: true. DKG orphans: 0.
 - Payload: .bits/out/DISP-GOVERNANCE-creator/memory.json.
 - No direct memory service writes. Post-merge ingestion remains external.
@@ -244,15 +260,16 @@ Repository conventions use logical stage headers at existing root/config paths:
 - Secret scan: changed content checked for prohibited credential prefixes;
   no credentials introduced. Verification uses Actions OIDC, not stored keys.
 - Stripe mode: not applicable; no checkout/payment logic touched.
-- GitHub settings/access: unchanged; activation and Muse identity mapping need an admin.
+- GitHub settings/access: unchanged; the operator confirmed the owner team/App.
+  An admin still enables protections and ensures team visibility/write access.
 
 ## §7 NEXT ACTIONS
 
 - Blockers: dependency install and lint/test/build validation; existing Node 20 CI
-  compatibility; unconfirmed Muse GitHub identity/team eligibility.
+  compatibility. Muse identity confirmation is complete.
 - After merge: verify a real main-run archive and reject tampered bytes, wrong
   workflow, and wrong source commit. Preserve the bundle before artifact expiry.
-- Handoffs: GitHub admin enables GOVERNANCE.md protections and validates ownership;
+- Handoffs: GitHub admin enables GOVERNANCE.md protections and team access;
   no private-stack handoff file needed.
 - Suggested next dispatch: operator-issued CI/dependency repair, then trusted-run
   provenance acceptance. No dispatch authorization is invented here.

@@ -51,7 +51,7 @@
       "dependencies": [
         ".bits/srs_registry.yml"
       ],
-      "lines": 65,
+      "lines": 66,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Specify accountable Creator ownership and verifiable signed build archives.",
@@ -122,7 +122,7 @@
       "dependencies": [
         ".bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md"
       ],
-      "lines": 77,
+      "lines": 81,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record the operator authorization and bounded staging tasks for Creator governance.",
@@ -163,7 +163,7 @@
       "dependencies": [
         "GOVERNANCE.md"
       ],
-      "lines": 23,
+      "lines": 22,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Route Creator changes to its GitHub owner team under Muse accountability.",
@@ -205,7 +205,7 @@
         ".github/CODEOWNERS",
         ".github/PROVENANCE.md"
       ],
-      "lines": 122,
+      "lines": 132,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Make Creator ownership decisions and administrator-enforced review policy explicit.",
@@ -392,7 +392,7 @@
         ".github/workflows/provenance.yml",
         ".github/PROVENANCE.md"
       ],
-      "lines": 263,
+      "lines": 280,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Preserve reproducible governance validation evidence and unresolved merge gates.",
@@ -485,7 +485,7 @@
         ".bits/out/DISP-GOVERNANCE-creator/report.md",
         ".bits/out/DISP-GOVERNANCE-creator/memory.cgrf.yaml"
       ],
-      "lines": 559,
+      "lines": 572,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Preserve file provenance, declared relationships, and actual validation outcomes for the Creator governance bootstrap.",
@@ -542,12 +542,25 @@
       "timestamp": "2026-10-20T17:33:54.557447+00:00",
       "commit_sha": null,
       "smoke_result": "4/8"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".github/CODEOWNERS",
+      "description": "Operator-confirmed guild-creator team and muse-creator-guildmaster App recorded; static checks passed for team-only CODEOWNERS, expected automation actor without bypass, and existing workflow/metadata invariants. Identity confirmation is complete.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": "Creator guildmaster identity follow-up resolved",
+      "dispatch_id": "DISP-GOVERNANCE-creator",
+      "timestamp": "2026-10-20T17:38:10.175680+00:00",
+      "commit_sha": null,
+      "smoke_result": "4/4 static checks"
     }
   ],
   "summary": {
     "type_a_count": 10,
     "type_b_count": 19,
-    "type_c_count": 3,
+    "type_c_count": 4,
     "ioo_compliance": true,
     "dkg_orphans": 0,
     "dispatch_id": "DISP-GOVERNANCE-creator",

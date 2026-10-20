@@ -56,9 +56,13 @@ staging change. The operator must resolve unrelated failures before merge.
 
 The source conversation requested governance and provenance for guildmasters.
 The operator's session follow-up supplies the missing bootstrap authorization.
-Existing Creator ownership uses `@citadel-nexus/creator-guild`; `guild-creator`
-is the Datadog team handle and `muse` is a GitLab identity, not a verified GitHub
-identity. Existing TypeScript build artifacts are emitted under `dist/`.
+The operator subsequently confirmed `@citadel-nexus/guild-creator` as the
+GitHub guildmaster owner team and `muse-creator-guildmaster` as Muse's GitHub App
+through the Datadog `guild-creator` team links. This same-SRS directive authorizes
+updating CODEOWNERS, the governance/ruleset identity documentation, and related
+evidence. GitHub Apps cannot be code owners; the team owns reviews and the App
+is the expected automation actor without a ruleset bypass. Identity confirmation
+is complete. Existing TypeScript build artifacts are emitted under `dist/`.
 
 ## Smoke commands
 
