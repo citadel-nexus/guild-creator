@@ -1,10 +1,10 @@
 # ─── CGRF Header ──────────────────────────────
 # File:        tsconfig.cgrf.yaml
 # Stage:       11_COMMIT
-# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001
+# SRS:         SRS-CN-CREATOR-LIVINGWORLD-001, SRS-CN-CREATOR-BUILD-001
 # CAPS:        pending
 # CK:          pending
-# Dispatch:    DISP-LIVINGWORLD-creator
+# Dispatch:    DISP-BUILD-creator
 # Seat:        BITS-CODEGEN
 # Owner:       Citadel Nexus Inc.
 # Created:     2026-09-25

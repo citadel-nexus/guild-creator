@@ -1,16 +1,16 @@
 # ─── CGRF Header ───────────────────────────────────────────────
 # File:        .bits/srs_registry.yml
 # Stage:       11_COMMIT
-# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001, SRS-CN-CREATOR-BUILD-001
 # CAPS:        pending
 # CK:          pending
-# Dispatch:    DISP-GOVERNANCE-creator
+# Dispatch:    DISP-BUILD-creator
 # Seat:        BITS-CODEGEN
 # Owner:       Citadel Nexus Inc.
 # Created:     2026-10-20
 # Depends:     none
 # EnumType:    ConfigDoc
-# EnumEdges:   GATES SRS-CN-CREATOR-GOVERNANCE-001
+# EnumEdges:   GATES SRS-CN-CREATOR-GOVERNANCE-001; GATES SRS-CN-CREATOR-BUILD-001
 # DAG Node:    creator.governance
 # Intent:      Register the bounded Creator governance bootstrap without changing existing SRS scopes.
 # ───────────────────────────────────────────────────────────────
@@ -59,3 +59,33 @@ SRS-CN-CREATOR-GOVERNANCE-001:
     Operator-authorized staging bootstrap for ownership, documented GitHub
     branch protection, and keyless signed SLSA build provenance. No deployment,
     settings changes, secrets, or unrelated product changes.
+
+SRS-CN-CREATOR-BUILD-001:
+  status: in_progress
+  phase: "Creator Guild reproducible build repair"
+  dispatch: DISP-BUILD-creator
+  cks_gate: B+/75
+  caps_minimum: pending
+  paths:
+    - package.json
+    - package-lock.json
+    - .nvmrc
+    - tsconfig*.json
+    - .eslintrc.json
+    - eslint.config.*
+    - '*.cgrf.yaml'
+    - src/
+    - vitest.config.ts
+    - .github/workflows/ci.yml
+    - .github/workflows/release.yml
+    - .github/workflows/provenance.yml
+    - .github/workflows/security-scan.yml
+    - .github/PROVENANCE.md
+    - .bits/srs_registry.yml
+    - .bits/srs/SRS-CN-CREATOR-BUILD-001.md
+    - .bits/queue/DISP-BUILD-creator.md
+    - .bits/out/DISP-BUILD-creator/
+  notes: >
+    Operator-authorized staging repair of lockfile, Node, TypeScript, ESLint,
+    tests, CI expressions, and real build provenance. Preserve tests and security
+    scans; no production, deployment, main pushes, settings, or secrets changes.

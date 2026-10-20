@@ -1,10 +1,10 @@
 # ─── CGRF Header ───────────────────────────────────────────────
 # File:        .github/PROVENANCE.md
 # Stage:       06_PLAN
-# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001, SRS-CN-CREATOR-BUILD-001
 # CAPS:        pending
 # CK:          pending
-# Dispatch:    DISP-GOVERNANCE-creator
+# Dispatch:    DISP-BUILD-creator
 # Seat:        BITS-CODEGEN
 # Owner:       Citadel Nexus Inc.
 # Created:     2026-10-20
@@ -21,10 +21,13 @@
 
 `provenance.yml` runs lint, tests, and the existing TypeScript build on PRs to
 `main` and pushes to `main`, using Node 24 to match the locked Vitest engine.
-It packages the compiled `dist/` tree (including compiler-emitted test/config
-files), `package.json`, and `package-lock.json` into
+It runs a full source/test typecheck, then packages the clean production `dist/`
+tree, `package.json`, and `package-lock.json` into
 `creator-<full-commit-sha>.tar.gz`. This is a build archive, not an npm package,
-container image, or deployment. Runtime dependencies are not bundled.
+container image, or deployment. The archive contains `dist/index.js` and its
+declaration file, matching the package entrypoint. Test files and Vitest config
+are typechecked but excluded from production emission. Runtime dependencies are
+not bundled.
 
 On a successful main push, a separate job downloads the same run's archive and
 uses `actions/attest-build-provenance` to produce a signed in-toto statement with
