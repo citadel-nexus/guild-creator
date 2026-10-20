@@ -63,7 +63,7 @@
       "dependencies": [
         ".bits/out/DISP-BUILD-creator/report.md"
       ],
-      "lines": 981,
+      "lines": 1133,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Provide the governance envelope for build-repair memory evidence.",
@@ -95,7 +95,7 @@
         "package.json",
         ".github/workflows/provenance.yml"
       ],
-      "lines": 200,
+      "lines": 226,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record actual build-repair evidence and unresolved dependency validation.",
@@ -136,7 +136,7 @@
       "dependencies": [
         ".bits/srs/SRS-CN-CREATOR-BUILD-001.md"
       ],
-      "lines": 48,
+      "lines": 59,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Record the operator-authorized build repair and its validation bounds.",
@@ -177,7 +177,7 @@
       "dependencies": [
         ".bits/srs_registry.yml"
       ],
-      "lines": 45,
+      "lines": 57,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Specify bounded Creator toolchain repair without weakening verification.",
@@ -226,7 +226,7 @@
       "enum_type": "ConfigDoc",
       "functions": [],
       "dependencies": [],
-      "lines": 91,
+      "lines": 93,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Register the bounded Creator governance bootstrap without changing existing SRS scopes.",
@@ -276,9 +276,10 @@
       "functions": [],
       "dependencies": [
         ".github/workflows/provenance.yml",
-        "GOVERNANCE.md"
+        "GOVERNANCE.md",
+        ".github/BUILD.md"
       ],
-      "lines": 127,
+      "lines": 147,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Give consumers an identity-bound verification policy for the exact signed Creator build bytes.",
@@ -383,7 +384,7 @@
         "package-lock.json",
         "tsconfig.json"
       ],
-      "lines": 99,
+      "lines": 128,
       "caps_grade": "pending",
       "ck_stamp": "pending",
       "intent_statement": "Bind validated Creator build archives to trusted main workflow identity with signed SLSA provenance.",
@@ -964,12 +965,163 @@
       "timestamp": "2026-10-20T17:58:49.978362+00:00",
       "commit_sha": null,
       "smoke_result": "0/5 required checks"
+    },
+    {
+      "type": "A",
+      "file_path": ".github/BUILD.md",
+      "cket_stage": "06_PLAN",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Doc",
+      "functions": [],
+      "dependencies": [
+        ".github/workflows/lockfile-refresh.yml",
+        ".github/PROVENANCE.md"
+      ],
+      "lines": 101,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Document safe registry-backed lockfile recovery, verification, and administrator prerequisites.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "A",
+      "file_path": ".github/workflows/lockfile-refresh.yml",
+      "cket_stage": "11_COMMIT",
+      "srs_codes": [
+        "SRS-CN-CREATOR-BUILD-001"
+      ],
+      "enum_type": "Workflow",
+      "functions": [],
+      "dependencies": [
+        ".nvmrc",
+        "package.json",
+        "package-lock.json"
+      ],
+      "lines": 163,
+      "caps_grade": "pending",
+      "ck_stamp": "pending",
+      "intent_statement": "Refresh real registry integrity and propose a lockfile-only PR after all build gates pass.",
+      "objective_id": "DISP-BUILD-creator",
+      "outcome": "partial",
+      "supersedes": false,
+      "dispatch_id": "DISP-BUILD-creator",
+      "seat": "BITS-CODEGEN",
+      "domain": "engineering",
+      "source_type": "seat_dispatch",
+      "tags": [
+        "DISP-BUILD-creator",
+        "BITS-CODEGEN",
+        "SRS-CN-CREATOR-BUILD-001",
+        "build-repair"
+      ],
+      "tenant_id": null
+    },
+    {
+      "type": "B",
+      "source": ".github/PROVENANCE.md",
+      "target": ".github/BUILD.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/PROVENANCE.md depends_on .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": ".github/workflows/lockfile-refresh.yml",
+      "edge_type": "VALIDATES",
+      "weight": 1.0,
+      "description": ".github/BUILD.md validates .github/workflows/lockfile-refresh.yml.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/BUILD.md",
+      "target": ".github/PROVENANCE.md",
+      "edge_type": "DEPENDS_ON",
+      "weight": 1.0,
+      "description": ".github/BUILD.md depends_on .github/PROVENANCE.md.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/lockfile-refresh.yml",
+      "target": ".nvmrc",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/lockfile-refresh.yml consumes .nvmrc.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/lockfile-refresh.yml",
+      "target": "package-lock.json",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "description": ".github/workflows/lockfile-refresh.yml consumes package-lock.json.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "B",
+      "source": ".github/workflows/lockfile-refresh.yml",
+      "target": ".github/BUILD.md",
+      "edge_type": "VERIFIED_BY",
+      "weight": 1.0,
+      "description": ".github/workflows/lockfile-refresh.yml verified_by .github/BUILD.md.",
+      "dispatch_id": "DISP-BUILD-creator",
+      "created_by": "BITS-CODEGEN"
+    },
+    {
+      "type": "C",
+      "event_type": "test_pass",
+      "file_path": ".bits/out/DISP-BUILD-creator/report.md",
+      "description": "Offline continuation checks passed for manual refresh policy, registry-metadata rejection, verification negative controls, fixed-branch publication, and preserved tests/security scans. All external interfaces were stubbed.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-creator",
+      "timestamp": "2026-10-20T18:19:40.181824+00:00",
+      "commit_sha": null,
+      "smoke_result": "4/4 static groups"
+    },
+    {
+      "type": "C",
+      "event_type": "test_fail",
+      "file_path": ".bits/out/DISP-BUILD-creator/report.md",
+      "description": "Reran offline npm ci, lint, typecheck, test, and build; uncached dependencies prevent actual execution. Hosted refresh and cryptographic verification remain pending.",
+      "caps_before": null,
+      "caps_after": null,
+      "dag_impact": null,
+      "dispatch_id": "DISP-BUILD-creator",
+      "timestamp": "2026-10-20T18:19:40.181824+00:00",
+      "commit_sha": null,
+      "smoke_result": "0/5 application checks"
     }
   ],
   "summary": {
-    "type_a_count": 21,
-    "type_b_count": 28,
-    "type_c_count": 3,
+    "type_a_count": 23,
+    "type_b_count": 34,
+    "type_c_count": 5,
     "ioo_compliance": true,
     "dkg_orphans": 0,
     "dispatch_id": "DISP-BUILD-creator",

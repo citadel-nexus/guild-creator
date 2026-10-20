@@ -8,9 +8,9 @@
 # Seat:        BITS-CODEGEN
 # Owner:       Citadel Nexus Inc.
 # Created:     2026-10-20
-# Depends:     .github/workflows/provenance.yml, GOVERNANCE.md
+# Depends:     .github/workflows/provenance.yml, GOVERNANCE.md, .github/BUILD.md
 # EnumType:    Doc
-# EnumEdges:   VALIDATES .github/workflows/provenance.yml; CONSUMES creator-signed build archive
+# EnumEdges:   VALIDATES .github/workflows/provenance.yml; CONSUMES creator-signed build archive; DEPENDS_ON .github/BUILD.md
 # DAG Node:    creator.governance
 # Intent:      Give consumers an identity-bound verification policy for the exact signed Creator build bytes.
 # ───────────────────────────────────────────────────────────────
@@ -125,3 +125,23 @@ and positive/negative verification results on the PR or the follow-up dispatch.
 Local YAML/archive checks cannot demonstrate OIDC signing or cryptographic
 verification; that acceptance gate remains pending until the main workflow runs.
 See `GOVERNANCE.md` for the required administrator setup and review checks.
+
+## Verification enforced by CI
+
+Before uploading creator-signed-<sha>, the signing job runs gh attestation verify
+against the actual archive and its preserved bundle. The policy requires this
+repository, .github/workflows/provenance.yml, refs/heads/main, the exact source
+SHA, the SLSA v1 predicate, GitHub's OIDC issuer, and GitHub-hosted runners.
+
+The job appends bytes to a temporary copy and requires rejection. It then uses
+an incorrect signer workflow identity and requires rejection of the original
+archive. Acceptance of either invalid case fails the job. A valid control is
+verified both before and after the negative checks; a continuing verifier/network
+failure blocks publication. Inspect the rejection diagnostics to distinguish
+policy mismatches from transient infrastructure errors. The original archive
+and bundle are not modified. No signed artifact is uploaded unless this step
+succeeds. Local tests exercise control flow with a stub verifier; live signing
+and cryptographic rejection still require a successful trusted main run.
+
+For the manual registry-backed lockfile repair and required GitHub settings,
+see .github/BUILD.md. No administrator settings are changed by these files.

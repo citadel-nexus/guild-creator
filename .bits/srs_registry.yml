@@ -81,6 +81,8 @@ SRS-CN-CREATOR-BUILD-001:
     - .github/workflows/provenance.yml
     - .github/workflows/security-scan.yml
     - .github/PROVENANCE.md
+    - .github/BUILD.md
+    - .github/workflows/lockfile-refresh.yml
     - .bits/srs_registry.yml
     - .bits/srs/SRS-CN-CREATOR-BUILD-001.md
     - .bits/queue/DISP-BUILD-creator.md

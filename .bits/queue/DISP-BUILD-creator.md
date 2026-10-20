@@ -21,8 +21,9 @@
 - status: in_progress
 - seat: BITS-CODEGEN
 - mode: staging
-- branch: bits/SRS-CN-CREATOR-BUILD-001-toolchain
-- base: cbc4e66eee2d4d1a1c6146c11901c30cc5ccc78d (merged governance PR #18)
+- branch: dd/bits/SRS-CN-CREATOR-GOVERNANCE-001-provenance
+- logical_build_branch: bits/SRS-CN-CREATOR-BUILD-001-toolchain
+- base: f0062863a0268040d7740dcc6fb48195c5d64bed (merged build PR #19)
 - authorization_source: authenticated operator Dmitry Richard, Bits AI directive
 - authorization_directive: "AUTHORIZED build repair"; register this SRS/dispatch,
   fix dependency installation, Node, TypeScript, ESLint, tests, CI expressions,
@@ -46,3 +47,13 @@ provenance job and existing CI fail; prior offline npm ci reported missing
 @opentelemetry/api. Vitest 5 requires Node 22.12+ or 24 but existing CI uses 20.
 The declared main entrypoint is dist/index.js; current tsc emits dist/src/index.js.
 This dispatch authorizes repairing those build failures in a separate PR.
+
+## Operator-authorized continuation
+
+The operator authorized a manual registry-backed lockfile refresh workflow,
+positive/negative provenance verification, and BUILD.md admin instructions under
+this same dispatch. The fixed automation PR branch is bits/lockfile-refresh.
+The session publication branch is bound to the earlier governance name. Both
+prior PRs (#18 and #19) are merged; fast-forwarding that local branch to current
+main preserves published history and leaves only new build follow-up changes
+for the next PR. No already-merged build commit is replayed or rewritten.
