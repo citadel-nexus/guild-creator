@@ -1,0 +1,97 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .github/workflows/provenance.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     package.json, package-lock.json, tsconfig.json
+# EnumType:    Workflow
+# EnumEdges:   CONSUMES package.json; CONSUMES package-lock.json; PRODUCES creator-signed build archive; VERIFIED_BY .github/PROVENANCE.md
+# DAG Node:    creator.governance
+# Intent:      Bind validated Creator build archives to trusted main workflow identity with signed SLSA provenance.
+# ───────────────────────────────────────────────────────────────
+
+name: Provenance — guild-creator
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: provenance-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - name: Package compiled build
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/src/index.js
+          mkdir -p artifacts
+          tar -czf "artifacts/creator-${GITHUB_SHA}.tar.gz" dist package.json package-lock.json
+      - name: Upload build for same-run signing
+        uses: actions/upload-artifact@v4
+        with:
+          name: creator-build-${{ github.sha }}
+          path: artifacts/creator-${{ github.sha }}.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  sign:
+    name: provenance-sign
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    steps:
+      - name: Download this run's build
+        uses: actions/download-artifact@v4
+        with:
+          name: creator-build-${{ github.sha }}
+          path: artifacts
+      - name: Sign SLSA build provenance
+        id: attest
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: artifacts/creator-${{ github.sha }}.tar.gz
+      - name: Preserve verification bundle
+        env:
+          BUNDLE_PATH: ${{ steps.attest.outputs.bundle-path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "$BUNDLE_PATH"
+          install -m 0644 "$BUNDLE_PATH" "artifacts/creator-${GITHUB_SHA}.sigstore.json"
+      - name: Upload signed archive and bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: creator-signed-${{ github.sha }}
+          path: |
+            artifacts/creator-${{ github.sha }}.tar.gz
+            artifacts/creator-${{ github.sha }}.sigstore.json
+          if-no-files-found: error
+          retention-days: 30

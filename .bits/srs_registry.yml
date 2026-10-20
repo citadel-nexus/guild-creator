@@ -1,3 +1,20 @@
+# ─── CGRF Header ───────────────────────────────────────────────
+# File:        .bits/srs_registry.yml
+# Stage:       11_COMMIT
+# SRS:         SRS-CN-CREATOR-GOVERNANCE-001
+# CAPS:        pending
+# CK:          pending
+# Dispatch:    DISP-GOVERNANCE-creator
+# Seat:        BITS-CODEGEN
+# Owner:       Citadel Nexus Inc.
+# Created:     2026-10-20
+# Depends:     none
+# EnumType:    ConfigDoc
+# EnumEdges:   GATES SRS-CN-CREATOR-GOVERNANCE-001
+# DAG Node:    creator.governance
+# Intent:      Register the bounded Creator governance bootstrap without changing existing SRS scopes.
+# ───────────────────────────────────────────────────────────────
+
 # Living-World SRS registry
 
 SRS-CN-CREATOR-LIVINGWORLD-001:
@@ -22,3 +39,23 @@ SRS-CN-CREATOR-AUTOMATION-001:
   notes: >
     Enable Datadog CI Visibility, document PostHog environment variables,
     and add CODEOWNERS for PR review automation.
+
+SRS-CN-CREATOR-GOVERNANCE-001:
+  status: in_progress
+  phase: "Creator Guild ownership governance and signed build provenance"
+  dispatch: DISP-GOVERNANCE-creator
+  cks_gate: B+/75
+  caps_minimum: pending
+  paths:
+    - .bits/srs_registry.yml
+    - .bits/srs/SRS-CN-CREATOR-GOVERNANCE-001.md
+    - .bits/queue/DISP-GOVERNANCE-creator.md
+    - .bits/out/DISP-GOVERNANCE-creator/
+    - .github/CODEOWNERS
+    - GOVERNANCE.md
+    - .github/workflows/provenance.yml
+    - .github/PROVENANCE.md
+  notes: >
+    Operator-authorized staging bootstrap for ownership, documented GitHub
+    branch protection, and keyless signed SLSA build provenance. No deployment,
+    settings changes, secrets, or unrelated product changes.
